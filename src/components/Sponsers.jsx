@@ -28,7 +28,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <div className="py-20 overflow-hidden relative bg-[#0a192f]">
+    <div className="py-20 overflow-hidden relative bg-[#0a192f] ">
       <h2 className="text-4xl font-bold text-center mb-12 text-white">
         Our Sponsors
       </h2>

@@ -245,80 +245,81 @@ const Home = () => {
 
         {/* Sponsors Section */}
         <Team />
-        <div className="mt-20  max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text ">
-            Locate Us
-          </h2>
-          <div className="grid mb-20 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#00b4d8]/20 backdrop-blur-sm">
-            {/* Map Section */}
-            <div className="h-[400px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
+
+      <div className="mt-20 max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text">
+          Locate Us
+        </h2>
+        <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#00b4d8]/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
+          {/* Map Section */}
+          <div className="h-[400px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-lg"
+            ></iframe>
+          </div>
+
+          {/* Location Details */}
+          <div className="space-y-8 text-white">
+            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                <i className="ri-calendar-event-line text-[#00b4d8]"></i>
+                When
+              </h3>
+              <p className="text-gray-300">1st March, 2025</p>
             </div>
 
-            {/* Location Details */}
-            <div className="space-y-8 text-white">
-              <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-calendar-event-line text-[#00b4d8]"></i>
-                  When
-                </h3>
-                <p className="text-gray-300">1st March, 2025</p>
-              </div>
+            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                <i className="ri-map-pin-line text-[#00b4d8]"></i>
+                Where
+              </h3>
+              <p className="text-gray-300">
+                Department of Electronic Systems,
+                <br />
+                INDIAN INSTITUTE OF SCIENCE,
+                <br />
+                Mathikere, Bengaluru,
+                <br />
+                Karnataka 560012
+              </p>
+            </div>
 
-              <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-map-pin-line text-[#00b4d8]"></i>
-                  Where
-                </h3>
-                <p className="text-gray-300">
-                  Department of Electronic Systems,
-                  <br />
-                  INDIAN INSTITUTE OF SCIENCE,
-                  <br />
-                  Mathikere, Bengaluru,
-                  <br />
-                  Karnataka 560012
-                </p>
-              </div>
+            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                <i className="ri-directions-line text-[#00b4d8]"></i>
+                How to get there
+              </h3>
+              <p className="text-gray-300">
+                IISc is often locally referred to as the Tata Institute. It is
+                better to use the name Tata Institute with the taxi,
+                auto-rickshaw drivers, and bus conductors. Inside the
+                institute, we have enough banners for directions to reach our
+                department DESE.
+              </p>
+            </div>
 
-              <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-directions-line text-[#00b4d8]"></i>
-                  How to get there
-                </h3>
-                <p className="text-gray-300">
-                  IISc is often locally referred to as the Tata Institute. It is
-                  better to use the name Tata Institute with the taxi,
-                  auto-rickshaw drivers, and bus conductors. Inside the
-                  institute, we have enough banners for directions to reach our
-                  department DESE.
-                </p>
-              </div>
-
-              <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-quill-pen-line text-[#00b4d8]"></i>A Note
-                  from the Chair
-                </h3>
-                <p className="text-gray-300 italic">
-                  Will update you the content
-                </p>
-              </div>
+            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                <i className="ri-quill-pen-line text-[#00b4d8]"></i>A Note from
+                the Chair
+              </h3>
+              <p className="text-gray-300 italic">Will update you the content</p>
             </div>
           </div>
         </div>
       </div>
-      <div id="sponsors-section">
+
+      {/* Sponsors Section */}
+      <div id="sponsors-section" className="mt-12">
         <Sponsors />
       </div>
+    </div>
     </>
   );
 };
