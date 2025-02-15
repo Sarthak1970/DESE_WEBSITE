@@ -1,46 +1,88 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { gsap } from "gsap";
 
 const FloatingShape = () => {
-    const createShapes = () => {
-        const shapes = [];
-        for (let i = 0; i < 50; i++) {
-            const size = Math.random() * 10 + 5;
-            const duration = Math.random() * 10 + 5;
-            const delay = Math.random() * -20;
-            const left = Math.random() * 100;
-            
-            shapes.push(
-                <div
-                    key={i}
-                    className="absolute z-[1000] rounded-full bg-blue-400 opacity-50 blur-sm"
-                    style={{
-                        width: `${size}px`,
-                        height: `${size}px`,
-                        left: `${left}%`,
-                        animation: `float ${duration}s ${delay}s infinite linear`,
-                        boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)'
-                    }}
-                />
-            );
-        }
-        return shapes;
-    };
+  const shapesRef = useRef([]);
 
-    return (
-        <div className="fixed inset-0 overflow-hidden pointer-events-none">
-            {createShapes()}
-            <style jsx>{`
-                @keyframes float {
-                    0% {
-                        transform: translateY(-10%);
-                    }
-                    100% {
-                        transform: translateY(110vh);
-                    }
-                }
-            `}</style>
-        </div>
-    );
+  useEffect(() => {
+    const shapes = shapesRef.current;
+    shapes.forEach((shape, index) => {
+      gsap.to(shape, {
+        duration: 8 + index * 2.5,
+        x: () => Math.random() * 300 - 150,
+        y: () => Math.random() * 300 - 150,
+        scale: 1.5,
+        opacity: 0.4,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: index * 1,
+      });
+    });
+  }, []);
+
+  return (
+    <div className="fixed inset-0 pointer-events-none z-[0] overflow-hidden">
+      {/* Subtle Background Effect */}
+      <motion.div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(30, 20, 50, 0.4), rgba(0, 0, 0, 0.6), black)",
+        }}
+        animate={{ opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Floating Galactic Shapes */}
+      <div className="absolute w-full h-full">
+        {[...Array(6)].map((_, index) => {
+          const sizeW = 180 + index * 60;
+          const sizeH = 120 + index * 40;
+          const top = index % 2 === 0 ? "-30%" : "85%"; 
+          const left = index % 2 === 0 ? "-30%" : "85%";
+
+          return (
+            <div
+              key={index}
+              ref={(el) => (shapesRef.current[index] = el)}
+              className="absolute blur-[30px] opacity-50"
+              style={{
+                width: `${sizeW}px`,
+                height: `${sizeH}px`,
+                borderRadius: "50%",
+                background: `radial-gradient(circle, ${
+                  index % 2 === 0 ? "#36234f" : "#6f0705"
+                } 60%, black 90%)`,
+                top,
+                left,
+              }}
+            />
+          );
+        })}
+      </div>
+
+      {/* Cosmic Dots */}
+      {[...Array(20)].map((_, index) => (
+        <motion.div
+          key={index}
+          className="absolute w-[2px] h-[2px] bg-white rounded-full"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            opacity: 0.6,
+          }}
+          animate={{ opacity: [0.2, 0.7, 0.2] }}
+          transition={{
+            duration: Math.random() * 5 + 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default FloatingShape;

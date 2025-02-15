@@ -29,32 +29,30 @@ const CountdownTimer = () => {
     }, [calculateTimeLeft]);
 
     return (
-        <section className='relative flex flex-col items-center justify-center bg-transparent w-full h-full'>
-            <div className="relative z-10 ">
-                {/* <h2 className='text-center mb-6 text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#0096c7]'> */}
-                    {/* <i className="ri-hourglass-line animate-pulse"></i> Countdown to Open Day <i className="ri-hourglass-line animate-pulse"></i> */}
-                {/* </h2> */}
-                <div className='flex gap-2 md:gap-3 justify-center items-center flex-wrap'>
-                    {timeLeft.days !== undefined ? (
-                        <>
-                            <DigitWheel value={String(timeLeft.days).padStart(2, '0')} label="DAYS" />
-                            <div className="text-2xl md:text-3xl text-[#00b4d8] animate-pulse">:</div>
-                            <DigitWheel value={String(timeLeft.hours).padStart(2, '0')} label="HRS" />
-                            <div className="text-2xl md:text-3xl text-[#00b4d8] animate-pulse">:</div>
-                            <DigitWheel value={String(timeLeft.minutes).padStart(2, '0')} label="MIN" />
-                            <div className="text-2xl md:text-3xl text-[#00b4d8] animate-pulse">:</div>
-                            <DigitWheel value={String(timeLeft.seconds).padStart(2, '0')} label="SEC" />
-                        </>
-                    ) : (
-                        <div className='text-[#00b4d8] text-xl md:text-2xl font-bold animate-bounce bg-[#0a192f]/50 px-6 py-3 rounded-full border border-[#00b4d8]/30'>
-                            EVENT STARTED
-                        </div>
-                    )}
-                </div>
+        <section className="relative flex flex-col items-center justify-center bg-transparent w-full h-full text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#0096c7] mb-6">
+                <i className="ri-hourglass-line animate-pulse"></i> Countdown to Open Day <i className="ri-hourglass-line animate-pulse"></i>
+            </h2>
+            <div className="flex gap-2 md:gap-3 justify-center items-center flex-wrap">
+                {timeLeft.days !== undefined ? (
+                    <>
+                        <DigitWheel value={String(timeLeft.days).padStart(2, '0')} label="DAYS" />
+                        <div className="text-2xl md:text-3xl text-[#00b4d8] animate-pulse">:</div>
+                        <DigitWheel value={String(timeLeft.hours).padStart(2, '0')} label="HRS" />
+                        <div className="text-2xl md:text-3xl text-[#00b4d8] animate-pulse">:</div>
+                        <DigitWheel value={String(timeLeft.minutes).padStart(2, '0')} label="MIN" />
+                        <div className="text-2xl md:text-3xl text-[#00b4d8] animate-pulse">:</div>
+                        <DigitWheel value={String(timeLeft.seconds).padStart(2, '0')} label="SEC" />
+                    </>
+                ) : (
+                    <div className="text-[#00b4d8] text-xl md:text-2xl font-bold animate-bounce bg-[#0a192f]/50 px-6 py-3 rounded-full border border-[#00b4d8]/30">
+                        EVENT STARTED
+                    </div>
+                )}
             </div>
         </section>
     );
-}
+};
 
 const DigitWheel = ({ value, label }) => (
     <div className="flex flex-col items-center">

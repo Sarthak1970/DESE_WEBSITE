@@ -139,7 +139,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <div className="mt-8">
+                    {/* <div className="mt-8">
                         <button 
                             className="w-full px-4 py-3 bg-[#00b4d8] text-white rounded-lg hover:bg-[#00b4d8]/90 transition-all duration-300 flex items-center justify-center gap-2"
                             onClick={() => {
@@ -152,7 +152,7 @@ const Navbar = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </nav>
         </>
