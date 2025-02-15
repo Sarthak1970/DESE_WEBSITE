@@ -17,6 +17,7 @@ import Sponsors from "../components/Sponsers";
 import Team from "../components/Team";
 import IISCMasterSealBlack from "../assets/IISC MasterSealBlack.svg";
 import DeseLogo from "../assets/DeseLogo.svg";
+import EventTimeline from "../components/EventTimeline";
 
 const Home = () => {
   return (
@@ -161,99 +162,8 @@ const Home = () => {
           </div>
         </div>
         <Event />
-        <div id="schedule" className="relative py-16 md:py-32 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
-            <div className="absolute inset-0 "></div>
-          </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#0096c7] animate-text-glow">
-              Event Timeline
-            </h2>
-            <div className="relative">
-              <div className="absolute left-1/2 h-full w-1 bg-[#00b4d8]/20 transform -translate-x-1/2 hidden sm:block"></div>
-              <div className="space-y-8 sm:space-y-16">
-                {[
-                  {
-                    time: "9:00 AM - 10:00 AM",
-                    title: "Registration & Welcome",
-                    location: "Main Lobby",
-                  },
-                  {
-                    time: "10:00 AM - 12:00 PM",
-                    title: "Campus Tour",
-                    location: "Starting at Main Building",
-                  },
-                  {
-                    time: "12:00 PM - 1:00 PM",
-                    title: "Lunch Break",
-                    location: "Cafeteria",
-                  },
-                  {
-                    time: "1:00 PM - 3:00 PM",
-                    title: "Department Presentations",
-                    location: "Auditorium",
-                  },
-                  {
-                    time: "3:00 PM - 4:00 PM",
-                    title: "Student Panel Discussion",
-                    location: "Room 101",
-                  },
-                  {
-                    time: "4:00 PM - 5:00 PM",
-                    title: "Closing Remarks",
-                    location: "Auditorium",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`group relative w-full ${
-                      index % 2 === 0 ? "sm:pr-[50%]" : "sm:pl-[50%]"
-                    }`}
-                  >
-                    <div className="absolute top-0 w-4 h-4 bg-[#00b4d8] rounded-full transform -translate-x-1/2 left-1/2 hidden sm:block"></div>
-                    <div className="group relative bg-[#0a192f]/50 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all duration-300 overflow-hidden">
-                      <div className="absolute inset-0 bg-[#00b4d8]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="relative z-10">
-                        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">
-                          {item.title}
-                        </h3>
-                        <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
-                          <div className="flex items-center gap-2">
-                            <i className="ri-time-line text-[#00b4d8]"></i>
-                            <span>{item.time}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <i className="ri-map-pin-line text-[#00b4d8]"></i>
-                            <span>{item.location}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* About Section */}
-        {/* <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-6 text-white">About Open Day</h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Our Open Day is the perfect opportunity to explore our campus, meet our faculty, and discover the wide range of programs we offer.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Experience our state-of-the-art facilities, learn about our innovative teaching methods, and get a glimpse of student life at our university.
-            </p>
-          </div>
-          <div className="bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-white/10">
-            <img src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg" alt="Campus Life" className="rounded-lg" />
-          </div>
-        </div>
-      </div> */}
+        <EventTimeline />
+      
         {/* Research Section */}
         <div id="research" className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">

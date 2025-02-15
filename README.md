@@ -25,7 +25,7 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/openday2025.git
+   git clone https://github.com/AreenSharma/DESE_WEBSITE.git
    ```
 2. Install dependencies:
    ```bash

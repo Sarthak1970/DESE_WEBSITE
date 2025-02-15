@@ -63,7 +63,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-[#00b4d8]/10 py-6">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-300 text-sm">
-          © {new Date().getFullYear()} University Name. All rights reserved.
+          © {new Date().getFullYear()} 
         </div>
       </div>
     </footer>
