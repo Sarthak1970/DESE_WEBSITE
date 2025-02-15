@@ -22,12 +22,16 @@ import EventTimeline from "../components/EventTimeline";
 const Home = () => {
   return (
     <>
-      <div className="relative z-0 min-h-screen bg-[#0a192f] ">
-        <div className="fixed z-[-1] inset-0 bg-[#0a192f]/50">
+      <div className="relative z-0 min-h-screen bg-[#030418] ">
+        <div className="fixed z-[-1] inset-0 bg-[#030418]/50">
           <img
             src={IISCBuilding}
             alt="IISC Building"
-            className="fixed w-full h-full object-contain object-center opacity-90"
+            className="fixed w-full h-full object-contain object-center"
+            style={{
+              filter: "brightness(0) invert(1)",
+              opacity: 0.25, // Set opacity to 1 for full opacity
+            }}
           />
         </div>
 
@@ -41,7 +45,7 @@ const Home = () => {
             className="absolute top-6 right-6 h-[60px] md:h-[80px] transition-transform duration-300 hover:scale-110"
             style={{
               filter:
-                "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
+                "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
             }}
           />
 
@@ -122,7 +126,7 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="space-y-8">
                 <p
-                  className="text-gray-300 text-xl leading-relaxed bg-[#0a192f]/50 p-6 rounded-xl backdrop-blur-sm border border-[#00b4d8]/50 shadow-[0_0_20px_rgba(0,180,216,0.2)] 
+                  className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-[#00b4d8]/50 shadow-[0_0_20px_rgba(0,180,216,0.2)] 
           hover:shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:scale-105 transition-all duration-300"
                 >
                   The Department of Electronic Systems Engineering (DESE),
@@ -131,7 +135,7 @@ const Home = () => {
                   systems engineering.
                 </p>
                 <p
-                  className="text-gray-300 text-xl leading-relaxed bg-[#0a192f]/50 p-6 rounded-xl backdrop-blur-sm border border-[#00b4d8]/50 shadow-[0_0_20px_rgba(0,180,216,0.2)] 
+                  className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-[#00b4d8]/50 shadow-[0_0_20px_rgba(0,180,216,0.2)] 
           hover:shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:scale-105 transition-all duration-300"
                 >
                   Our department focuses on training engineers, fostering
@@ -199,7 +203,7 @@ const Home = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-[#0a192f]/50 p-8 rounded-2xl backdrop-blur-sm border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all duration-300 overflow-hidden"
+                  className="group relative bg-[#030418]/50 p-8 rounded-2xl backdrop-blur-sm border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-[#00b4d8]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
@@ -219,107 +223,109 @@ const Home = () => {
             </div>
           </div>
         </div>
-{/* Gallery Section */}
-<div className="py-20 px-4 max-w-7xl mx-auto">
-  <h2 className="text-4xl font-bold text-center mb-12 text-white">
-    Gallery
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <img
-      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
-      alt="Gallery 1"
-      className="rounded-lg"
-    />
-    <img
-      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
-      alt="Gallery 2"
-      className="rounded-lg"
-    />
-    <img
-      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
-      alt="Gallery 3"
-      className="rounded-lg"
-    />
-  </div>
-</div>
+        {/* Gallery Section */}
+        <div className="py-20 px-4 max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">
+            Gallery
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <img
+              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
+              alt="Gallery 1"
+              className="rounded-lg"
+            />
+            <img
+              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
+              alt="Gallery 2"
+              className="rounded-lg"
+            />
+            <img
+              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
+              alt="Gallery 3"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
 
         {/* Sponsors Section */}
         <Team />
 
-      <div className="mt-20 max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text">
-          Locate Us
-        </h2>
-        <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#00b4d8]/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
-          {/* Map Section */}
-          <div className="h-[400px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              className="rounded-lg"
-            ></iframe>
-          </div>
-
-          {/* Location Details */}
-          <div className="space-y-8 text-white">
-            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                <i className="ri-calendar-event-line text-[#00b4d8]"></i>
-                When
-              </h3>
-              <p className="text-gray-300">1st March, 2025</p>
+        <div className="mt-20 max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text">
+            Locate Us
+          </h2>
+          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#00b4d8]/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
+            {/* Map Section */}
+            <div className="h-[400px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                className="rounded-lg"
+              ></iframe>
             </div>
 
-            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                <i className="ri-map-pin-line text-[#00b4d8]"></i>
-                Where
-              </h3>
-              <p className="text-gray-300">
-                Department of Electronic Systems,
-                <br />
-                INDIAN INSTITUTE OF SCIENCE,
-                <br />
-                Mathikere, Bengaluru,
-                <br />
-                Karnataka 560012
-              </p>
-            </div>
+            {/* Location Details */}
+            <div className="space-y-8 text-white">
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                  <i className="ri-calendar-event-line text-[#00b4d8]"></i>
+                  When
+                </h3>
+                <p className="text-gray-300">1st March, 2025</p>
+              </div>
 
-            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                <i className="ri-directions-line text-[#00b4d8]"></i>
-                How to get there
-              </h3>
-              <p className="text-gray-300">
-                IISc is often locally referred to as the Tata Institute. It is
-                better to use the name Tata Institute with the taxi,
-                auto-rickshaw drivers, and bus conductors. Inside the
-                institute, we have enough banners for directions to reach our
-                department DESE.
-              </p>
-            </div>
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                  <i className="ri-map-pin-line text-[#00b4d8]"></i>
+                  Where
+                </h3>
+                <p className="text-gray-300">
+                  Department of Electronic Systems,
+                  <br />
+                  INDIAN INSTITUTE OF SCIENCE,
+                  <br />
+                  Mathikere, Bengaluru,
+                  <br />
+                  Karnataka 560012
+                </p>
+              </div>
 
-            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                <i className="ri-quill-pen-line text-[#00b4d8]"></i>A Note from
-                the Chair
-              </h3>
-              <p className="text-gray-300 italic">Will update you the content</p>
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                  <i className="ri-directions-line text-[#00b4d8]"></i>
+                  How to get there
+                </h3>
+                <p className="text-gray-300">
+                  IISc is often locally referred to as the Tata Institute. It is
+                  better to use the name Tata Institute with the taxi,
+                  auto-rickshaw drivers, and bus conductors. Inside the
+                  institute, we have enough banners for directions to reach our
+                  department DESE.
+                </p>
+              </div>
+
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                  <i className="ri-quill-pen-line text-[#00b4d8]"></i>A Note
+                  from the Chair
+                </h3>
+                <p className="text-gray-300 italic">
+                  Will update you the content
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Sponsors Section */}
-      <div id="sponsors-section" className="mt-12">
-        <Sponsors />
+        {/* Sponsors Section */}
+        <div id="sponsors-section" className="mt-12">
+          <Sponsors />
+        </div>
       </div>
-    </div>
     </>
   );
 };
