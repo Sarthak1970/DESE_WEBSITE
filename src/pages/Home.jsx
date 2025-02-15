@@ -219,29 +219,30 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* Gallery Section */}
-        <div className="py-20 px-4 max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">
-            Gallery
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <img
-              src="https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg"
-              alt="Library"
-              className="rounded-lg"
-            />
-            <img
-              src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg"
-              alt="Lecture"
-              className="rounded-lg"
-            />
-            <img
-              src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg"
-              alt="Students"
-              className="rounded-lg"
-            />
-          </div>
-        </div>
+{/* Gallery Section */}
+<div className="py-20 px-4 max-w-7xl mx-auto">
+  <h2 className="text-4xl font-bold text-center mb-12 text-white">
+    Gallery
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <img
+      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
+      alt="Gallery 1"
+      className="rounded-lg"
+    />
+    <img
+      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
+      alt="Gallery 2"
+      className="rounded-lg"
+    />
+    <img
+      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
+      alt="Gallery 3"
+      className="rounded-lg"
+    />
+  </div>
+</div>
+
         {/* Sponsors Section */}
         <Team />
         <div className="mt-20  max-w-6xl mx-auto px-4">

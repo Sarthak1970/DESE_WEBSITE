@@ -7,12 +7,20 @@ const Gallery = () => {
   const tl = useRef(null);
   const [isAnimating, setIsAnimating] = useState(true);
 
+  const images = [
+    'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg',
+    'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg',
+    'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg',
+    'https://res.cloudinary.com/dosnuagvu/image/upload/v1739555533/Images_in_about_us_p3-min_bq9ywj.jpg'
+  ];
+
   useEffect(() => {
     const gallery = galleryRef.current;
     const images = gallery.querySelectorAll('img');
     const totalWidth = Array.from(images).reduce((acc, img) => acc + img.offsetWidth + 32, 0);
 
-    tl.current = gsap.timeline({ repeat: -1 });
+    // Create GSAP timeline for infinite scrolling
+    tl.current = gsap.timeline({ repeat: -1, repeatDelay: 0 });
     tl.current.to(gallery, {
       x: `-=${totalWidth / 2}`,
       duration: totalWidth / 100,
@@ -59,26 +67,26 @@ const Gallery = () => {
         className="absolute top-0 left-0 h-full flex items-center gap-8 z-10"
         style={{ width: '200%' }}
       >
-        {[...Array(6)].map((_, i) => (
+        {images.map((src, i) => (
           <img
             key={i}
-            src={`https://picsum.photos/400/300?random=${i}`}
-            alt={`Gallery ${i}`}
+            src={src}
+            alt={`Gallery ${i + 1}`}
             className="h-80 w-auto rounded-lg shadow-lg object-cover"
           />
         ))}
-        {[...Array(6)].map((_, i) => (
+        {images.map((src, i) => (
           <img
-            key={i + 6}
-            src={`https://picsum.photos/400/300?random=${i + 6}`}
-            alt={`Gallery ${i + 6}`}
+            key={i + 4}
+            src={src}
+            alt={`Gallery ${i + 5}`}
             className="h-80 w-auto rounded-lg shadow-lg object-cover"
           />
         ))}
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r  z-20" />
+      <div className="absolute inset-0 bg-gradient-to-r z-20" />
     </div>
   );
 };
