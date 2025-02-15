@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Demo from './pages/Demo'
 import FloatingShape from './components/FloatingShape'
 import Footer from './components/Footer'
-
+import GoldenJubilee from './pages/GoldenJubilee'
 const App = () => {
   return (
     <Router>
@@ -15,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Demo" element={<Demo />} />
+          <Route path="/GoldenJubilee" element={<GoldenJubilee />} />
         </Routes>
         <Footer />
       </div>

@@ -161,9 +161,11 @@ const Home = () => {
             <CountdownTimer />
           </div>
         </div>
-        <Event />
+        <div className="events-section">
+          <Event />
+        </div>
         <EventTimeline />
-      
+
         {/* Research Section */}
         <div id="research" className="relative py-32 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -313,7 +315,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Sponsors />
+      <div id="sponsors-section">
+        <Sponsors />
+      </div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom'; 
 import { 
     RiHome4Line,
     RiInformationLine,
@@ -20,15 +20,16 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState('Home');
     const [isNavOpen, setIsNavOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const navItems = [
-        { name: 'Home', href: '/', icon: RiHome4Line },
+        { name: 'Home', href: '/', icon: RiHome4Line, isPage: true },
         { name: 'About DESE', href: '#about-dese', icon: RiInformationLine },
         { name: 'Research', href: '#research', icon: RiBookLine },
-        { name: 'Demos', href: '#demos', icon: RiSlideshowLine },
+        { name: 'Demos', href: '/demo', icon: RiSlideshowLine, isPage: true },
         { name: 'Events', href: '#events', icon: RiCalendarEventLine },
         { name: 'Schedule', href: '#schedule', icon: RiTimeLine },
-        { name: 'Golden Jubilee', href: '#jubilee', icon: RiMedalLine },
+        { name: 'Golden Jubilee', href: '/goldenjubilee', icon: RiMedalLine },
         { name: 'Sponsors', href: '#sponsors', icon: RiTeamLine },
         { name: 'Locate us', href: '#location', icon: RiMapPinLine },
         { name: 'Open day team', href: '#team', icon: RiGroupLine }
@@ -36,17 +37,27 @@ const Navbar = () => {
 
     useEffect(() => {
         gsap.set(navRef.current, { x: '-100%' });
-        
-        // Update active link based on scroll position
+
         const handleScroll = () => {
             const sections = document.querySelectorAll('section[id]');
+            let currentActiveSection = '';
+            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 if (window.scrollY >= sectionTop - sectionHeight / 3) {
-                    setActiveLink(section.id.replace('-', ' '));
+                    currentActiveSection = section.id;
                 }
             });
+
+            if (currentActiveSection) {
+                const matchingNavItem = navItems.find(item => 
+                    item.href.replace('#', '').replace('/', '') === currentActiveSection
+                );
+                if (matchingNavItem) {
+                    setActiveLink(matchingNavItem.name);
+                }
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -71,19 +82,19 @@ const Navbar = () => {
         });
     };
 
-    const handleNavigation = (href, name, event) => {
-        event.preventDefault();
-        setActiveLink(name);
-        setIsNavOpen(false);
-
-        const targetSection = document.getElementById(href.slice(1));
-        if (targetSection) {
-            targetSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
+    const scrollToHashId = () => {
+        const hash = window.location.hash;
+        if (hash) {
+            const element = document.getElementById(hash.slice(1));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     };
+
+    useEffect(() => {
+        scrollToHashId();
+    }, [location]);
 
     return (
         <>
@@ -121,10 +132,9 @@ const Navbar = () => {
                             {navItems.map((item) => {
                                 const Icon = item.icon;
                                 return (
-                                    <a
+                                    <Link
                                         key={item.name}
-                                        href={item.href}
-                                        onClick={(e) => handleNavigation(item.href, item.name, e)}
+                                        to={item.href}  // Use `to` for navigation
                                         className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 ${
                                             activeLink.toLowerCase() === item.name.toLowerCase()
                                                 ? 'bg-[#00b4d8]/10 text-[#00b4d8] shadow-[0_0_10px_2px_rgba(0,180,216,0.1)] border-l-4 border-[#00b4d8]'
@@ -133,26 +143,11 @@ const Navbar = () => {
                                     >
                                         <Icon className="w-5 h-5" />
                                         <span className="text-sm font-medium">{item.name}</span>
-                                    </a>
+                                    </Link>
                                 );
                             })}
                         </div>
                     </div>
-
-                    {/* <div className="mt-8">
-                        <button 
-                            className="w-full px-4 py-3 bg-[#00b4d8] text-white rounded-lg hover:bg-[#00b4d8]/90 transition-all duration-300 flex items-center justify-center gap-2"
-                            onClick={() => {
-                                setActiveLink('Contact');
-                                navigate('/contact');
-                            }}
-                        >
-                            <span>Contact Us</span>
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </button>
-                    </div> */}
                 </div>
             </nav>
         </>
