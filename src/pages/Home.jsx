@@ -31,7 +31,7 @@ const Home = () => {
           />
         </div>
 
-        <div id="Hero" className="relative h-screen">
+        <div id="hero" className="relative h-screen">
           <FloatingShape />
 
           {/* DESE Logo (Top Right) */}
@@ -161,7 +161,7 @@ const Home = () => {
             <CountdownTimer />
           </div>
         </div>
-        <div className="events-section">
+        <div id="Events" className="events-section">
           <Event />
         </div>
         <EventTimeline />
@@ -243,8 +243,9 @@ const Home = () => {
   </div>
 </div>
 
-        {/* Sponsors Section */}
+      <div id="team">
         <Team />
+      </div>
 
       <div className="mt-20 max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text">
@@ -265,6 +266,7 @@ const Home = () => {
           </div>
 
           {/* Location Details */}
+          <div id="location">
           <div className="space-y-8 text-white">
             <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
               <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
@@ -311,6 +313,7 @@ const Home = () => {
               </h3>
               <p className="text-gray-300 italic">Will update you the content</p>
             </div>
+          </div>
           </div>
         </div>
       </div>
