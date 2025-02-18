@@ -1,8 +1,20 @@
 import React from "react";
-
+import IISCBuilding from "../assets/IISC main building svg.svg";
 const GoldenJubilee = () => {
   return (
-    <div className="bg-[#0a192f] text-white min-h-screen flex flex-col items-center p-6">
+    <div className="relative bg-[#0a192f] text-white min-h-screen flex flex-col items-center p-6">
+      {/* Background Image */}
+      <img
+        src={IISCBuilding}
+        alt="IISC Building"
+        className="fixed w-full h-full object-contain object-center"
+        style={{
+          filter: "brightness(0) invert(1)",
+          opacity: 0.25, // Set opacity to 1 for full opacity
+          zIndex: -1,
+        }}
+      />
+
       {/* Golden Jubilee Logo */}
       <div className="mb-16">
         <svg
@@ -24,9 +36,9 @@ const GoldenJubilee = () => {
       </div>
 
       {/* Containers */}
-      <div className="space-y-10 w-full max-w-6xl"> {/* Increase max width here */}
+      <div className="space-y-10 w-full max-w-6xl">
         {/* Container 1 */}
-        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90">
+                <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
           <div className="w-full md:w-1/2">
             <img
               src="https://labs.dese.iisc.ac.in/openday/wp-content/uploads/sites/12/2024/02/50-1.jpg"
@@ -52,7 +64,7 @@ const GoldenJubilee = () => {
         </div>
 
         {/* Container 2 */}
-        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90">
+        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
           <div className="w-full md:w-1/2">
             <img
               src="https://labs.dese.iisc.ac.in/openday/wp-content/uploads/sites/12/2024/02/50-2.jpg"
@@ -77,7 +89,7 @@ const GoldenJubilee = () => {
         </div>
 
         {/* Container 3 */}
-        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90">
+        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
           <div className="w-full md:w-1/2">
             <img
               src="https://labs.dese.iisc.ac.in/openday/wp-content/uploads/sites/12/2024/02/50-3.jpg"
@@ -106,7 +118,7 @@ const GoldenJubilee = () => {
         </div>
 
         {/* Container 4 */}
-        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90">
+        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
           <div className="w-full md:w-1/2">
             <img
               src="https://labs.dese.iisc.ac.in/openday/wp-content/uploads/sites/12/2024/02/50-4.jpg"
@@ -131,7 +143,7 @@ const GoldenJubilee = () => {
         </div>
 
         {/* Container 5 */}
-        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90">
+        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
           <div className="w-full md:w-1/2">
             <img
               src="https://labs.dese.iisc.ac.in/openday/wp-content/uploads/sites/12/2024/02/DSC02375.jpg"
@@ -152,20 +164,10 @@ const GoldenJubilee = () => {
               division of Electrical Sciences of the Indian Institute of Science.
             </p>
           </div>
-        </div>
-
-        {/* Final Container */}
-        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90">
-          <div className="w-full md:w-1/2 text-center text-gray-300 md:text-left text-sm md:text-base">
-            <p className="text-lg font-medium">
-              It has been 50 years and the Department of Electronic Systems
-              Engineering is every year creating history with achieving new
-              milestones.
-            </p>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

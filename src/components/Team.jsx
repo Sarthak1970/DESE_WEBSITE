@@ -15,22 +15,21 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="py-16 ">
-      <h2 className="text-4xl font-bold text-center mb-12 text-white">Meet Our Team</h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+    <div className="py-16 z-50">
+      <h2 className="text-4xl font-bold text-center mb-12 text-white z-50">Meet Our Team</h2>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 z-50">
         {teamMembers.map((member, index) => (
-          <div key={index} className="text-center p-6 bg-[#112240] shadow-lg rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+          <div key={index} className="text-center p-6 bg-[#112240] shadow-lg rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all z-50">
             <img
               src={member.image}
               alt={member.name}
-              className="w-48 h-48 object-cover object-top mx-auto rounded-full border-4 border-[#00b4d8]/20"
+              className="w-48 h-48 object-cover object-top mx-auto rounded-full border-4 border-[#00b4d8]/20 z-50"
             />
-            <h3 className="text-xl font-semibold mt-4 text-white">{member.name}</h3>
-            <p className="text-[#00b4d8]">{member.role}</p>
+            <h3 className="text-xl font-semibold mt-4 text-white z-50">{member.name}</h3>
+            <p className="text-[#00b4d8] z-50">{member.role}</p>
           </div>
         ))}
-          </div>
-    
+      </div>
     </div>
   );
 };

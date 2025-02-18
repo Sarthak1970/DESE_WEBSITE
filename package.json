@@ -1,8 +1,11 @@
 {
   "name": "dese",
   "private": true,
+  "type":"module",
+  "babel": {
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+  },
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

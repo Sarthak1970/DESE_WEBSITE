@@ -42,7 +42,7 @@ const Home = () => {
           <img
             src={IISCMasterSealBlack}
             alt="DESE Logo"
-            className="absolute top-6 right-6 h-[60px] md:h-[80px] transition-transform duration-300 hover:scale-110"
+            className="absolute top-6 right-6 h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
             style={{
               filter:
                 "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
@@ -53,7 +53,7 @@ const Home = () => {
             {/* Wrapper for logos */}
             <div className="relative flex flex-col items-center">
               {/* DESE Logo (Fixed Size) */}
-              <img
+              {/* <img
                 src={DeseLogo}
                 alt="DESE Logo"
                 className="absolute left-1/2 -top-12 transform -translate-x-1/2 max-w-[300px]"
@@ -63,97 +63,100 @@ const Home = () => {
                   filter:
                     "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
                 }}
-              />
+              /> */}
 
               {/* Open Day Logo (Hover Effect) */}
-              <div className="animate-fade-in-up animate-duration-1000 animate-ease-in-out">
-                <img
-                  src={OpenDaySvg}
-                  alt="Open Day Logo"
-                  className="h-[250px] mb-8 transform transition-transform duration-300 hover:scale-110"
-                />
-              </div>
-            </div>
+                      <div className="animate-fade-in-up animate-duration-1000 animate-ease-in-out">
+                      <img
+                        src={OpenDaySvg}
+                        alt="Open Day Logo"
+                        className="h-[250px] mb-8 transform transition-transform duration-300 hover:scale-110"
+                      />
+                      </div>
+                    </div>
 
-            <div className="flex gap-4 animate-fade-in-up animate-delay-500">
-              <Button
-                variant="primary"
-                className="bg-opacity-20 border border-[#00b4d8] hover:shadow-[#00b4d8]/30"
-              >
-                Register Now
-              </Button>
-              <Button
-                variant="secondary"
-                className="bg-white/10 border border-white/20 hover:shadow-white/20"
-              >
-                Learn More
-              </Button>
-            </div>
+                    {/* <div className="flex gap-4 animate-fade-in-up animate-delay-500">
+                      <Button
+                      variant="primary"
+                      className="bg-opacity-20 border border-[#2E2388] hover:shadow-[#2E2388]/30"
+                      >
+                      Register Now
+                      </Button>
+                      <Button
+                      variant="secondary"
+                      className="bg-white/10 border border-white/20 hover:shadow-white/20"
+                      onClick={() => {
+                        document.getElementById('about-dese').scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      >
+                      Learn More
+                      </Button>
+                    </div> */}
 
-            <div
-              className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer"
-              onClick={() => {
-                const nextSection = document.getElementById("event-highlights");
-                nextSection.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <svg
-                className="w-8 h-8 text-white hover:text-[#00b4d8] transition-colors"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                ></path>
-              </svg>
-            </div>
-          </div>
-        </div>
+                    <div
+                      className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer"
+                      onClick={() => {
+                      const nextSection = document.getElementById("event-highlights");
+                      nextSection.scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      <svg
+                      className="w-8 h-8 text-white hover:text-[#2E2388] transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                      ></path>
+                      </svg>
+                    </div>
+                    </div>
+                  </div>
 
-        {/* About DESE Section */}
-        <div id="about-dese" className="relative py-32 px-4 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-10"></div>
-          </div>
-          <div className="relative z-10 max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#0096c7] animate-text-glow">
-              About DESE
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                <p
-                  className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-[#00b4d8]/50 shadow-[0_0_20px_rgba(0,180,216,0.2)] 
-          hover:shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:scale-105 transition-all duration-300"
-                >
-                  The Department of Electronic Systems Engineering (DESE),
-                  formerly CEDT, was established in 1974 with a vision to
-                  achieve excellence in research and education in electronic
-                  systems engineering.
-                </p>
-                <p
-                  className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-[#00b4d8]/50 shadow-[0_0_20px_rgba(0,180,216,0.2)] 
-          hover:shadow-[0_0_30px_rgba(0,180,216,0.4)] hover:scale-105 transition-all duration-300"
-                >
-                  Our department focuses on training engineers, fostering
-                  collaboration with the electronics industry in India, and
-                  making a positive societal impact through innovative research
-                  and development.
-                </p>
-              </div>
-              <div className="relative group">
-                <div className="absolute rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-1 rounded-2xl overflow-hidden">
-                  <Gallery />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Events Timeline */}
+                   { /* About DESE Section */}
+                    <div id="about-dese" className="relative py-32 px-4 overflow-hidden">
+                    <div className="absolute inset-0 z-0">
+                      <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-10"></div>
+                    </div>
+                    <div className="relative z-10 max-w-7xl mx-auto">
+                      <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#f8f7ff] to-[#848cd9] animate-text-glow">
+                      About DESE
+                      </h2>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                      <div className="space-y-8">
+                    <p
+                      className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-white/20 shadow-[0_0_20px_rgba(66,49,183,0.2)] 
+                    hover:border-white hover:shadow-[0_0_30px_rgba(66,49,183,0.4)] hover:scale-105 transition-all duration-300"
+                    >
+                      The Department of Electronic Systems Engineering (DESE),
+                      formerly CEDT, was established in 1974 with a vision to
+                      achieve excellence in research and education in electronic
+                      systems engineering.
+                    </p>
+                    <p
+                      className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-white/20 shadow-[0_0_20px_rgba(66,49,183,0.2)] 
+                    hover:border-white hover:shadow-[0_0_30px_rgba(66,49,183,0.4)] hover:scale-105 transition-all duration-300"
+                    >
+                      Our department focuses on training engineers, fostering
+                      collaboration with the electronics industry in India, and
+                      making a positive societal impact through innovative research
+                      and development.
+                    </p>
+                      </div>
+                      <div className="relative group">
+                    <div className="absolute rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative p-1 rounded-2xl overflow-hidden">
+                      <Gallery />
+                    </div>
+                      </div>
+                      </div>
+                    </div>
+                    </div>
+                    {/* Events Timeline */}
         <div
           id="countdown"
           className="relative py-16 md:py-32 overflow-hidden flex justify-center items-center"
@@ -171,13 +174,13 @@ const Home = () => {
         <EventTimeline />
 
         {/* Research Section */}
-        <div id="research" className="relative py-32 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
-            <div className="absolute inset-0 "></div>
-          </div>
+          <div id="research" className="relative py-16 md:py-32 px-4">
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
+            </div>
+            <div className="relative z-10 max-w-8xl mx-auto"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#0096c7] animate-text-glow">
+            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#2E2388] to-[#0096c7] animate-text-glow">
               Research Areas
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -203,12 +206,12 @@ const Home = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-[#030418]/50 p-8 rounded-2xl backdrop-blur-sm border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all duration-300 overflow-hidden"
+                  className="group relative bg-[#030418]/50 p-8 rounded-2xl backdrop-blur-sm border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all duration-300 overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-[#00b4d8]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-[#2E2388]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <i
-                      className={`${item.icon} text-4xl mb-4 text-[#00b4d8]`}
+                      className={`${item.icon} text-4xl mb-4 text-[#2E2388]`}
                     ></i>
                     <h3 className="text-2xl font-bold mb-4 text-white">
                       {item.title}
@@ -224,37 +227,37 @@ const Home = () => {
           </div>
         </div>
         {/* Gallery Section */}
-        <div className="py-20 px-4 max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">
-            Gallery
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <img
-              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
-              alt="Gallery 1"
-              className="rounded-lg"
-            />
-            <img
-              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
-              alt="Gallery 2"
-              className="rounded-lg"
-            />
-            <img
-              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
-              alt="Gallery 3"
-              className="rounded-lg"
-            />
+          <div className="py-20 px-4 max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
+              Gallery
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <img
+                src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
+                alt="Gallery 1"
+                className="rounded-lg z-[9999]"
+              />
+              <img
+                src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
+                alt="Gallery 2" 
+                className="rounded-lg z-[9999]"
+              />
+              <img
+                src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
+                alt="Gallery 3"
+                className="rounded-lg z-[9999]"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Sponsors Section */}
+          {/* Sponsors Section */}
         <Team />
 
         <div className="mt-20 max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#2E2388] to-[#2E2388]/70 bg-clip-text">
             Locate Us
           </h2>
-          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#00b4d8]/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
+          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#2E2388]/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
             {/* Map Section */}
             <div className="h-[400px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
               <iframe
@@ -270,17 +273,17 @@ const Home = () => {
 
             {/* Location Details */}
             <div className="space-y-8 text-white">
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
                 <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-calendar-event-line text-[#00b4d8]"></i>
+                  <i className="ri-calendar-event-line text-[#2E2388]"></i>
                   When
                 </h3>
                 <p className="text-gray-300">1st March, 2025</p>
               </div>
 
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
                 <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-map-pin-line text-[#00b4d8]"></i>
+                  <i className="ri-map-pin-line text-[#2E2388]"></i>
                   Where
                 </h3>
                 <p className="text-gray-300">
@@ -294,9 +297,9 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
                 <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-directions-line text-[#00b4d8]"></i>
+                  <i className="ri-directions-line text-[#2E2388]"></i>
                   How to get there
                 </h3>
                 <p className="text-gray-300">
@@ -308,9 +311,9 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
+              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
                 <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-quill-pen-line text-[#00b4d8]"></i>A Note
+                  <i className="ri-quill-pen-line text-[#2E2388]"></i>A Note
                   from the Chair
                 </h3>
                 <p className="text-gray-300 italic">

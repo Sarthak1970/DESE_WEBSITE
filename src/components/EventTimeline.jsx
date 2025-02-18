@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from "react";
 
 const EventTimeline = () => {
@@ -15,61 +16,70 @@ const EventTimeline = () => {
   };
 
   return (
-    <div id="schedule" className="relative py-16 md:py-32">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#00b4d8] to-[#0096c7] animate-text-glow">
+    <div id="schedule" className="relative py-16 md:py-32 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#ececed] to-[#b584fd] animate-text-glow"
+        >
           Event Timeline
-        </h2>
+        </motion.h2>
 
-        {/* Timeline Container */}
         <div className="flex flex-col items-start space-y-12 sm:space-y-16">
           {events.map((event, index) => (
-            <div key={index} className="relative w-full">
-              {/* Connecting Line */}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative w-full"
+            >
               {index > 0 && (
-                <div className="absolute left-1/2 top-0 h-[120%] w-1 bg-[#00b4d8]/20 hidden sm:block"></div>
+                <div className="absolute left-1/2 top-0 h-[120%] w-1 bg-[#6354C3]/20 hidden sm:block"></div>
               )}
 
-              {/* Event Box (Expandable) */}
-              <div
-                className="relative bg-[#0a192f]/50 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all duration-300 cursor-pointer overflow-hidden"
+              <motion.div
+                whileHover={{ scale: 1.02, boxShadow: '0 0 15px 5px rgba(155,93,229,0.3)' }}
+                transition={{ duration: 0.8 }}
+                className="relative bg-[#030519]/50 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-[#2C2382]/20 hover:border-[#9b5de5]/50 transition-all duration-300 cursor-pointer overflow-hidden group"
                 onClick={() => toggleExpand(index)}
               >
-                <div className="absolute inset-0 bg-[#00b4d8]/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="relative z-10">
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">
                     {event.title}
                   </h3>
                   <div className="text-gray-300 text-sm sm:text-base">
                     <div className="flex items-center gap-2">
-                      <i className="ri-time-line text-[#00b4d8]"></i>
+                      <i className="ri-time-line text-[#b584fd]"></i>
                       <span>{event.time}</span>
                     </div>
                     {expandedEvent === index && (
-                      <>
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        transition={{ duration: 0.3 }}
+                      >
                         {event.speaker && (
                           <div className="flex items-center gap-2 mt-2">
-                            <i className="ri-user-line text-[#00b4d8]"></i>
+                            <i className="ri-user-line text-[#b584fd]"></i>
                             <span>Speaker: {event.speaker}</span>
                           </div>
                         )}
                         <div className="flex items-center gap-2 mt-2">
-                          <i className="ri-map-pin-line text-[#00b4d8]"></i>
+                          <i className="ri-map-pin-line text-[#b584fd]"></i>
                           <span>{event.location}</span>
                         </div>
-                      </>
+                      </motion.div>
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Timeline Dot */}
-              <div className="absolute -top-2 left-1/2 w-4 h-4 bg-[#00b4d8] rounded-full transform -translate-x-1/2 hidden sm:block"></div>
-            </div>
+              <div className="absolute -top-2 left-1/2 w-4 h-4 bg-[#b584fd] rounded-full transform -translate-x-1/2 hidden sm:block"></div>
+            </motion.div>
           ))}
         </div>
       </div>
