@@ -6,9 +6,12 @@ import Demo from './pages/Demo'
 import FloatingShape from './components/FloatingShape'
 import Footer from './components/Footer'
 import GoldenJubilee from './pages/GoldenJubilee'
+import ScrollToTop from './components/ScrollToTop'
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Navbar />
         <FloatingShape />
