@@ -15,20 +15,67 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="py-16 z-50">
-      <h2 className="text-4xl font-bold text-center mb-12 text-white z-50">Meet Our Team</h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 z-50">
-        {teamMembers.map((member, index) => (
-          <div key={index} className="text-center p-6 bg-[#112240] shadow-lg rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all z-50">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-48 h-48 object-cover object-top mx-auto rounded-full border-4 border-[#00b4d8]/20 z-50"
-            />
-            <h3 className="text-xl font-semibold mt-4 text-white z-50">{member.name}</h3>
-            <p className="text-[#00b4d8] z-50">{member.role}</p>
-          </div>
-        ))}
+    <div className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#030418] to-[#0a0b2e] opacity-90"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-4">
+            Meet Our Team
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            The brilliant minds behind our success
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {teamMembers.map((member, index) => (
+            <div 
+              key={index} 
+              className="group [perspective:1000px]"
+            >
+              <div className="relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front of card */}
+                <div className="relative overflow-hidden rounded-2xl bg-[#0a0b2e]/80 p-6 backdrop-blur-sm
+                              border border-white/10 transition-all duration-500">
+                  <div className="relative mb-6">
+                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-xl">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="h-full w-full object-cover object-center"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm font-medium text-gray-400">
+                      {member.role}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Back of card */}
+                <div className="absolute inset-0 h-full w-full rounded-2xl bg-[#0a0b2e]/80 p-6 backdrop-blur-sm
+                              border border-white/10 [transform:rotateY(180deg)] [backface-visibility:hidden]
+                              flex flex-col items-center justify-center text-center">
+                  <h3 className="text-xl font-bold text-blue-400 mb-4">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-medium text-purple-400 mb-4">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-300 text-sm">
+                    "Passionate about innovation and technology"
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
