@@ -37,38 +37,38 @@ const Home = () => {
           />
         </div>
 
-        <div id="hero" className="relative h-screen">
+        <div id="hero" className="relative min-h-screen">
           <FloatingShape />
 
           {/* IISC Logo (Top Right) */}
           <img
             src={IISCMasterSealBlack}
             alt="IISC Logo"
-            className="absolute top-10 md:top-6 right-4 md:right-6 h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
+            className="absolute top-4 sm:top-6 md:top-8 right-4 sm:right-6 md:right-8 h-[50px] sm:h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
             style={{
               filter: "brightness(0) invert(1)",
             }}
           />
 
           {/* DESE Logo (Top Left) */}
-          <div className="absolute left-4 top-20 md:top-25 transform -translate-y-1/2">
+          <div className="absolute left-4 sm:left-6 md:left-8 top-4 sm:top-6 md:top-8">
             <img
               src={DESELogoLeft}
               alt="DESE Logo"
-              className="h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
+              className="h-[50px] sm:h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
               style={{
                 filter: "brightness(0) invert(1)",
               }}
             />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 md:px-8">
             <div className="relative flex flex-col items-center">
               <div className="animate-fade-in-up animate-duration-1000 animate-ease-in-out">
                 <img
                   src={OpenDaySvg}
                   alt="Open Day Logo"
-                  className="h-[250px] mb-8 transform transition-all duration-300 hover:scale-110 hover:brightness-125"
+                  className="h-[150px] sm:h-[200px] md:h-[250px] mb-8 transform transition-all duration-300 hover:scale-110 hover:brightness-125"
                 />
               </div>
             </div>
@@ -79,12 +79,12 @@ const Home = () => {
                 nextSection.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              <h2 className="text-white text-2xl font-bold mb-4 text-center bg-clip-text bg-gradient-to-r from-white to-blue-400 text-transparent">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-center bg-clip-text bg-gradient-to-r from-white to-blue-400 text-transparent">
                 1st MARCH, 2025 | 9AM-5PM
               </h2>
 
               <svg
-                className="w-8 h-8 mx-auto text-white group-hover:text-blue-400 transition-colors duration-300"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto text-white group-hover:text-blue-400 transition-colors duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -101,17 +101,17 @@ const Home = () => {
         </div>
 
         {/* About DESE Section */}
-        <div id="about-dese" className="relative py-32 px-4 overflow-hidden">
+        <div id="about-dese" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-5"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-text-glow">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-text-glow">
               About Us
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                <p className="text-gray-200 text-lg leading-relaxed bg-[#0a0b2e]/80 p-8 rounded-xl backdrop-blur-sm border border-white/10 shadow-lg hover:border-white/30 hover:shadow-blue-500/20 transition-all duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div className="space-y-6 sm:space-y-8">
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed bg-[#0a0b2e]/80 p-6 sm:p-8 rounded-xl backdrop-blur-sm border border-white/10 shadow-lg hover:border-white/30 hover:shadow-blue-500/20 transition-all duration-300">
                   IISc's Open Day is an annual event when the Institute opens
                   its doors for the general public to visit, learn, question,
                   and understand various technological projects and research
@@ -137,12 +137,12 @@ const Home = () => {
         {/* Countdown Section */}
         <div
           id="countdown"
-          className="relative py-16 md:py-32 overflow-hidden flex justify-center items-center"
+          className="relative py-12 sm:py-16 md:py-32 overflow-hidden flex justify-center items-center"
         >
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-5"></div>
           </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 flex flex-col items-center">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col items-center">
             <CountdownTimer />
           </div>
         </div>
@@ -154,16 +154,16 @@ const Home = () => {
         <EventTimeline />
 
         {/* Research Section */}
-        <div id="research" className="relative py-16 md:py-32 px-4">
+        <div id="research" className="relative py-12 sm:py-16 md:py-32 px-4 sm:px-6 md:px-8">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-5"></div>
           </div>
           <div className="relative z-10 max-w-8xl mx-auto"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 animate-text-glow">
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 animate-text-glow">
               Research Areas
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   title: "Signal Processing",
@@ -186,17 +186,17 @@ const Home = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-[#0a0b2e]/80 p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-blue-500/20"
+                  className="group relative bg-[#0a0b2e]/80 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-blue-500/20"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <i
-                      className={`${item.icon} text-4xl mb-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300`}
+                      className={`${item.icon} text-3xl sm:text-4xl mb-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300`}
                     ></i>
-                    <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                       {item.description}
                     </p>
                   </div>
@@ -207,11 +207,11 @@ const Home = () => {
         </div>
 
         {/* Gallery Section */}
-        <div className="py-20 px-4 max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
+        <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Gallery
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {[
               "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg",
               "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg",
@@ -221,7 +221,7 @@ const Home = () => {
                 <img
                   src={src}
                   alt={`Gallery ${index + 1}`}
-                  className="rounded-lg w-full h-full object-cover"
+                  className="rounded-lg w-full h-48 sm:h-64 md:h-72 object-cover"
                 />
               </div>
             ))}
@@ -231,13 +231,13 @@ const Home = () => {
         <div id="team">
           <Team />
         </div>
-        <div className="mt-20 max-w-6x1 mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
+        <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Locate Us
           </h2>
-          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-8 bg-[#0a0b2e]/80 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-sm">
             {/* Map Section */}
-            <div className="h-[500px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
+            <div className="h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
                 width="100%"
@@ -277,12 +277,12 @@ const Home = () => {
                     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem dolore vero fugiat quia quisquam pariatur laborum laudantium iste, laboriosam sapiente nam nesciunt quo reiciendis eligendi, quae, cupiditate ex possimus saepe id officia."
                   }
                 ].map((item, index) => (
-                  <div key={index} className="p-4 bg-[#0a0b2e] rounded-lg border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.01]">
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2 text-blue-300">
+                  <div key={index} className="p-4 sm:p-6 bg-[#0a0b2e] rounded-lg border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.01]">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 flex items-center gap-2 text-blue-300">
                       <i className={`${item.icon} text-blue-400`}></i>
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 whitespace-pre-line text-sm">
+                    <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line">
                       {item.content}
                     </p>
                   </div>
@@ -293,7 +293,7 @@ const Home = () => {
         </div>
 
           {/* Sponsors Section */}
-          <div id="sponsors-section" className="mt-12">
+          <div id="sponsors-section" className="mt-8 sm:mt-10 md:mt-12">
             <Sponsors />
           </div>
         </div>
