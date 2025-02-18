@@ -231,14 +231,13 @@ const Home = () => {
         <div id="team">
           <Team />
         </div>
-
         <div className="mt-20 max-w-6x1 mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Locate Us
           </h2>
-          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#0a0b2e]/80 p-8 rounded-xl border border-white/10 backdrop-blur-sm">
+          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-8 bg-[#0a0b2e]/80 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
             {/* Map Section */}
-            <div className="h-[750px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
+            <div className="h-[500px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
                 width="100%"
@@ -252,7 +251,7 @@ const Home = () => {
 
             {/* Location Details */}
             <div id="location">
-              <div className="space-y-8 text-white">
+              <div className="space-y-4 text-white">
                 {[
                   {
                     title: "When",
@@ -278,12 +277,12 @@ const Home = () => {
                     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem dolore vero fugiat quia quisquam pariatur laborum laudantium iste, laboriosam sapiente nam nesciunt quo reiciendis eligendi, quae, cupiditate ex possimus saepe id officia."
                   }
                 ].map((item, index) => (
-                  <div key={index} className="p-6 bg-[#0a0b2e] rounded-lg border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02]">
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2 text-blue-300">
+                  <div key={index} className="p-4 bg-[#0a0b2e] rounded-lg border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.01]">
+                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2 text-blue-300">
                       <i className={`${item.icon} text-blue-400`}></i>
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 whitespace-pre-line">
+                    <p className="text-gray-300 whitespace-pre-line text-sm">
                       {item.content}
                     </p>
                   </div>
@@ -291,13 +290,14 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
 
           {/* Sponsors Section */}
           <div id="sponsors-section" className="mt-12">
             <Sponsors />
           </div>
         </div>
-      </div>
+      
     </>
   );
 };
