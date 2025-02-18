@@ -53,20 +53,24 @@ const Navbar = () => {
         setIsMenuOpen(false);
     };
 
-    // Handle scroll direction to hide or show the navbar
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
-            setIsScrolledDown(currentScrollPos > prevScrollPos);
+            setIsScrolledDown(currentScrollPos > prevScrollPos && currentScrollPos > 100);
             setPrevScrollPos(currentScrollPos);
         };
 
         window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos]);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isMenuOpen]);
 
     return (
         <header 
@@ -81,15 +85,15 @@ const Navbar = () => {
                         <img
                             src=""
                             alt=""
-                            className="h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
+                            className="h-12 md:h-16 lg:h-[70px] transition-transform duration-300 hover:scale-110"
                             style={{
                                 filter: "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
                             }}
                         />
                     </div>
 
-                    {/* Centered Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center justify-center space-x-2 backdrop-blur">
+                    {/* Desktop Navigation */}
+                    <nav className="hidden lg:flex items-center justify-center space-x-2 backdrop-blur-sm p-2 rounded-full">
                         {navItems.map((item) => (
                             <button
                                 key={item.name}
@@ -109,12 +113,13 @@ const Navbar = () => {
                     {/* Mobile Menu Button */}
                     <button 
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-[#f8f7ff] hover:text-[#848cd9] transition-colors"
+                        className="lg:hidden p-2 text-[#f8f7ff] hover:text-[#848cd9] transition-colors"
+                        aria-label="Toggle menu"
                     >
                         {isMenuOpen ? (
-                            <RiCloseLine className="w-8 h-8" />
+                            <RiCloseLine className="w-6 h-6 md:w-8 md:h-8" />
                         ) : (
-                            <RiMenuLine className="w-8 h-8" />
+                            <RiMenuLine className="w-6 h-6 md:w-8 md:h-8" />
                         )}
                     </button>
                 </div>
@@ -122,27 +127,29 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div 
-                className={`lg:hidden fixed inset-0 bg-black/90 backdrop-blur-xl transition-transform duration-300 ease-in-out ${
-                    isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+                className={`lg:hidden fixed inset-0 bg-[#030418]/95 backdrop-blur-lg transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                 }`}
-                style={{ top: '96px' }}
+                style={{ top: '64px', height: 'calc(100vh - 64px)' }}
             >
-                <nav className="container mx-auto px-4 py-4">
-                    <div className="flex flex-col space-y-2">
-                        {navItems.map((item) => (
-                            <button
-                                key={item.name}
-                                onClick={() => handleNavClick(item)}
-                                className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 ${
-                                    activeLink === item.name
-                                        ? 'bg-[#2E2388]/10 text-[#848cd9]'
-                                        : 'text-[#f8f7ff] hover:bg-[#2E2388]/5 hover:text-[#848cd9]'
-                                }`}
-                            >
-                                <item.icon className="w-5 h-5" />
-                                <span className="text-base font-medium">{item.name}</span>
-                            </button>
-                        ))}
+                <nav className="h-full overflow-y-auto">
+                    <div className="container mx-auto px-4 py-6">
+                        <div className="flex flex-col space-y-3">
+                            {navItems.map((item) => (
+                                <button
+                                    key={item.name}
+                                    onClick={() => handleNavClick(item)}
+                                    className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 ${
+                                        activeLink === item.name
+                                            ? 'bg-[#2E2388]/10 text-[#848cd9]'
+                                            : 'text-[#f8f7ff] hover:bg-[#2E2388]/5 hover:text-[#848cd9]'
+                                    }`}
+                                >
+                                    <item.icon className="w-5 h-5" />
+                                    <span className="text-base font-medium">{item.name}</span>
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </nav>
             </div>
