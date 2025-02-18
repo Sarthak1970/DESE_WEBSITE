@@ -28,11 +28,11 @@ const Sponsors = () => {
   ];
 
   return (
-    <div className="py-20 overflow-hidden relative bg-[#0a192f] ">
+    <div className="mt-20 max-w-6xl mx-auto px-4 py-20 overflow-hidden relative bg-[#030418]">
       <h2 className="text-4xl font-bold text-center mb-12 text-white">
         Our Sponsors
       </h2>
-      <div className="relative mx-auto w-3/4 h-32 overflow-hidden">
+      <div className="relative mx-auto w-full h-32 overflow-hidden">
         <div
           ref={marqueeRef}
           className="flex items-center space-x-16 whitespace-nowrap"

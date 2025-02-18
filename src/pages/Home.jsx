@@ -1,10 +1,12 @@
-import React from "react";
+<div className="mt-20 max-w-6x1 mx-auto px-4"></div>;
 import {
   RiCalendarEventLine,
   RiMapPinLine,
   RiTeamLine,
   RiMedalLine,
 } from "@remixicon/react";
+import DESELogoLeft from "../assets/DESELogoLeft.svg";
+import Anniv50 from "../assets/Anniv50.svg";
 import OpenDaySvg from "../assets/Open Day LOGO White.svg";
 import FloatingShape from "../components/FloatingShape";
 import IISCBuilding from "../assets/IISC main building svg.svg";
@@ -48,6 +50,17 @@ const Home = () => {
                 "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
             }}
           />
+          <div className="absolute left-4 top-25 transform -translate-y-1/2">
+            <img
+              src={DESELogoLeft}
+              alt="Falied to load image"
+              className="h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
+              style={{
+                filter:
+                  "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
+              }}
+            />
+          </div>
 
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
             {/* Wrapper for logos */}
@@ -66,16 +79,17 @@ const Home = () => {
               /> */}
 
               {/* Open Day Logo (Hover Effect) */}
-                      <div className="animate-fade-in-up animate-duration-1000 animate-ease-in-out">
-                      <img
-                        src={OpenDaySvg}
-                        alt="Open Day Logo"
-                        className="h-[250px] mb-8 transform transition-transform duration-300 hover:scale-110"
-                      />
-                      </div>
-                    </div>
-
-                    {/* <div className="flex gap-4 animate-fade-in-up animate-delay-500">
+              <div className="animate-fade-in-up animate-duration-1000 animate-ease-in-out">
+                <img
+                  src={OpenDaySvg}
+                  alt="Open Day Logo"
+                  className="h-[250px] mb-8 transform transition-transform duration-300 hover:scale-110"
+                />
+              </div>
+            
+            </div>
+            
+            {/* <div className="flex gap-4 animate-fade-in-up animate-delay-500">
                       <Button
                       variant="primary"
                       className="bg-opacity-20 border border-[#2E2388] hover:shadow-[#2E2388]/30"
@@ -93,42 +107,44 @@ const Home = () => {
                       </Button>
                     </div> */}
 
-                    <div
-                      className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer"
-                      onClick={() => {
-                      const nextSection = document.getElementById("event-highlights");
-                      nextSection.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      <svg
-                      className="w-8 h-8 text-white hover:text-[#2E2388] transition-colors"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                      ></path>
-                      </svg>
-                    </div>
-                    </div>
-                  </div>
+            <div
+              className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer "
+              onClick={() => {
+                const nextSection = document.getElementById("event-highlights");
+                nextSection.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <h2 className="text-white text-2xl font-bold mb-4 text-center">1st MARCH, 2025 | 9AM-5PM</h2>
 
-                   { /* About DESE Section */}
-                    <div id="about-dese" className="relative py-32 px-4 overflow-hidden">
-                    <div className="absolute inset-0 z-0">
-                      <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-10"></div>
-                    </div>
-                    <div className="relative z-10 max-w-7xl mx-auto">
-                      <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#f8f7ff] to-[#848cd9] animate-text-glow">
-                      About DESE
-                      </h2>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                      <div className="space-y-8">
-                    <p
+              <svg
+                className="w-8 h-8 text-center text-white hover:text-[#2E2388] transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* About DESE Section */}
+        <div id="about-dese" className="relative py-32 px-4 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-10"></div>
+          </div>
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#f8f7ff] to-[#848cd9] animate-text-glow">
+              About Us
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                {/* <p
                       className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-white/20 shadow-[0_0_20px_rgba(66,49,183,0.2)] 
                     hover:border-white hover:shadow-[0_0_30px_rgba(66,49,183,0.4)] hover:scale-105 transition-all duration-300"
                     >
@@ -145,18 +161,30 @@ const Home = () => {
                       collaboration with the electronics industry in India, and
                       making a positive societal impact through innovative research
                       and development.
-                    </p>
-                      </div>
-                      <div className="relative group">
-                    <div className="absolute rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="relative p-1 rounded-2xl overflow-hidden">
-                      <Gallery />
-                    </div>
-                      </div>
-                      </div>
-                    </div>
-                    </div>
-                    {/* Events Timeline */}
+                    </p> */}
+                <p className="text-white text-lg">
+                  IISc's Open Day is an annual event when the Institute opens
+                  its doors for the general public to visit, learn, question,
+                  and understand various technological projects and research
+                  that is going on. It's designed to inspire scientific
+                  curiosity in people of all ages. On this day, the institute
+                  opens its doors to the public, offering a glimpse into
+                  cutting-edge research and innovations. DESE (formerly known as
+                  CEDT) gladly invites students, professors, lecturers from
+                  various academic institutions, and professionals from the
+                  industry. We look forward to seeing you!
+                </p>
+              </div>
+              <div className="relative group">
+                <div className="absolute rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative p-1 rounded-2xl overflow-hidden">
+                  <Gallery />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Events Timeline */}
         <div
           id="countdown"
           className="relative py-16 md:py-32 overflow-hidden flex justify-center items-center"
@@ -174,16 +202,16 @@ const Home = () => {
         <EventTimeline />
 
         {/* Research Section */}
-          <div id="research" className="relative py-16 md:py-32 px-4">
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
-            </div>
-            <div className="relative z-10 max-w-8xl mx-auto"></div>
+        <div id="research" className="relative py-16 md:py-32 px-4">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
+          </div>
+          <div className="relative z-10 max-w-8xl mx-auto"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#2E2388] to-[#0096c7] animate-text-glow">
+            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#b584fd] to-[#0096c7] animate-text-glow  hover:border-[#6354C3]/50 transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_5px_rgba(155,93,229,0.3)">
               Research Areas
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8  hover:border-[#6354C3]/50 transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_5px_rgba(155,93,229,0.3)">
               {[
                 {
                   title: "Signal Processing",
@@ -226,122 +254,117 @@ const Home = () => {
             </div>
           </div>
         </div>
-{/* Gallery Section */}
-<div className="py-20 px-4 max-w-7xl mx-auto">
-  <h2 className="text-4xl font-bold text-center mb-12 text-white">
-    Gallery
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <img
-      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
-      alt="Gallery 1"
-      className="rounded-lg"
-    />
-    <img
-      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
-      alt="Gallery 2"
-      className="rounded-lg"
-    />
-    <img
-      src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
-      alt="Gallery 3"
-      className="rounded-lg"
-    />
-  </div>
-</div>
-
-      <div id="team">
-        <Team />
-      </div>
-
-      <div className="mt-20 max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#00b4d8] to-[#00b4d8]/70 bg-clip-text">
-          Locate Us
-        </h2>
-        <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[#112240] p-8 rounded-xl border border-[#00b4d8]/20 backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
-          {/* Map Section */}
-          <div className="h-[400px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
+        {/* Gallery Section */}
+        <div className="py-20 px-4 max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">
+            Gallery
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <img
+              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
+              alt="Gallery 1"
               className="rounded-lg"
-            ></iframe>
+            />
+            <img
+              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
+              alt="Gallery 2"
+              className="rounded-lg"
+            />
+            <img
+              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
+              alt="Gallery 3"
+              className="rounded-lg"
+            />
           </div>
+        </div>
 
-          {/* Location Details */}
-          <div id="location">
-          <div className="space-y-8 text-white">
-            <div className="p-6 bg-[#0a192f] rounded-lg border border-[#00b4d8]/20 hover:border-[#00b4d8]/50 transition-all">
-              <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                <i className="ri-calendar-event-line text-[#00b4d8]"></i>
-                When
-              </h3>
-              <p className="text-gray-300">1st March, 2025</p>
+        <div id="team">
+          <Team />
+        </div>
+        <div className="mt-20 max-w-6x1 mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#8a8a8a] to-[#6c6c6c]/70 bg-clip-text">
+            Locate Us
+          </h2>
+          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[1d1e19] p-8 rounded-xl border border-[#8a8a8a]/20 backdrop-blur-sm transform">
+            {/* Map Section */}
+            <div className="h-[750px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                className="rounded-lg"
+              ></iframe>
             </div>
 
             {/* Location Details */}
-            <div className="space-y-8 text-white">
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-calendar-event-line text-[#2E2388]"></i>
-                  When
-                </h3>
-                <p className="text-gray-300">1st March, 2025</p>
-              </div>
+            <div id="location">
+              <div className="space-y-8 text-white">
+                {/* Location Details */}
+                <div className="space-y-8 text-white hover:scale-105 transition-transform duration-300">
+                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
+                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                      <i className="ri-map-pin-line text-[#8a8a8a]"></i>
+                      When
+                    </h3>
+                    <p className="text-gray-300">1st March, 2025</p>
+                  </div>
 
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-map-pin-line text-[#2E2388]"></i>
-                  Where
-                </h3>
-                <p className="text-gray-300">
-                  Department of Electronic Systems,
-                  <br />
-                  INDIAN INSTITUTE OF SCIENCE,
-                  <br />
-                  Mathikere, Bengaluru,
-                  <br />
-                  Karnataka 560012
-                </p>
-              </div>
+                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
+                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                      <i className="ri-map-pin-line text-[#8a8a8a]"></i>
+                      Where
+                    </h3>
+                    <p className="text-gray-300">
+                      Department of Electronic Systems, <br />
+                      INDIAN INSTITUTE OF SCIENCE, <br />
+                      Mathikere, Bengaluru, <br />
+                      Karnataka 560012
+                    </p>
+                  </div>
 
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-directions-line text-[#2E2388]"></i>
-                  How to get there
-                </h3>
-                <p className="text-gray-300">
-                  IISc is often locally referred to as the Tata Institute. It is
-                  better to use the name Tata Institute with the taxi,
-                  auto-rickshaw drivers, and bus conductors. Inside the
-                  institute, we have enough banners for directions to reach our
-                  department DESE.
-                </p>
-              </div>
+                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
+                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                      <i className="ri-directions-line text-[#8a8a8a]"></i>
+                      How to get there
+                    </h3>
+                    <p className="text-gray-300">
+                      IISc is often locally referred to as the Tata Institute.
+                      It is better to use the name Tata Institute with the taxi,
+                      auto-rickshaw drivers, and bus conductors. Inside the
+                      institute, we have enough banners for directions to reach
+                      our department DESE.
+                    </p>
+                  </div>
 
-              <div className="p-6 bg-[#030418] rounded-lg border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all">
-                <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                  <i className="ri-quill-pen-line text-[#2E2388]"></i>A Note
-                  from the Chair
-                </h3>
-                <p className="text-gray-300 italic">
-                  Will update you the content
-                </p>
+                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
+                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                      <i className="ri-quill-pen-line text-[#8a8a8a]"></i>A Note
+                      from the Chair
+                    </h3>
+                    <p className="text-gray-300 italic">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eveniet exercitationem dolore vero fugiat quia quisquam
+                      pariatur laborum laudantium iste, laboriosam sapiente nam
+                      nesciunt quo reiciendis eligendi, quae, cupiditate ex
+                      possimus saepe id officia. Exercitationem quae aspernatur
+                      accusamus asperiores fugit quidem at deserunt, libero
+                      voluptates minus, amet repudiandae eos ipsa consequuntur
+                      quam nemo officiis esse? Ratione, natus.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Sponsors Section */}
+          <div id="sponsors-section" className="mt-12">
+            <Sponsors />
           </div>
         </div>
-
-        {/* Sponsors Section */}
-        <div id="sponsors-section" className="mt-12">
-          <Sponsors />
-        </div>
-      </div>
       </div>
     </>
   );

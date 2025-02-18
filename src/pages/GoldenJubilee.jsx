@@ -1,5 +1,7 @@
 import React from "react";
+import DESELogoLeft from "../assets/DESELogoLeft.svg";
 import IISCBuilding from "../assets/IISC main building svg.svg";
+
 const GoldenJubilee = () => {
   return (
     <div className="relative bg-[#0a192f] text-white min-h-screen flex flex-col items-center p-6">
@@ -17,28 +19,21 @@ const GoldenJubilee = () => {
 
       {/* Golden Jubilee Logo */}
       <div className="mb-16">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="100"
-          height="100"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#FFD700"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mx-auto"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <line x1="12" y1="2" x2="12" y2="22" />
-          <line x1="2" y1="12" x2="22" y2="12" />
-        </svg>
+        <img
+          src={DESELogoLeft}
+          alt="DESE Logo"
+          className="absolute top-25 left-20 transform -translate-x-1/2 -translate-y-1/2 h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
+          style={{
+            filter:
+              "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
+          }}
+        />
       </div>
 
       {/* Containers */}
       <div className="space-y-10 w-full max-w-6xl">
         {/* Container 1 */}
-                <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
+        <div className="bg-[#1e2a47] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:border-[#FFD700] hover:shadow-lg hover:shadow-[#FFD700]/50 hover:scale-[1.02] hover:bg-[#1e2a47]/90 z-[2147483647]">
           <div className="w-full md:w-1/2">
             <img
               src="https://labs.dese.iisc.ac.in/openday/wp-content/uploads/sites/12/2024/02/50-1.jpg"
@@ -164,10 +159,9 @@ const GoldenJubilee = () => {
               division of Electrical Sciences of the Indian Institute of Science.
             </p>
           </div>
-          </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
