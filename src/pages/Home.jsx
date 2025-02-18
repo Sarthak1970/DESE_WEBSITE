@@ -32,7 +32,7 @@ const Home = () => {
             className="fixed w-full h-full object-contain object-center"
             style={{
               filter: "brightness(0) invert(1)",
-              opacity: 0.25, // Set opacity to 1 for full opacity
+              opacity: 0.25, 
             }}
           />
         </div>
@@ -303,17 +303,17 @@ const Home = () => {
             <div id="location">
               <div className="space-y-8 text-white">
                 {/* Location Details */}
-                <div className="space-y-8 text-white hover:scale-105 transition-transform duration-300">
+                <div className="space-y-8 text-white hover:scale-105 transition-transform duration-300 text-center">
                   <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                      <i className="ri-map-pin-line text-[#8a8a8a]"></i>
+                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
+                      <i className="ri-map-pin-line text-[#8a8a8a] "></i>
                       When
                     </h3>
                     <p className="text-gray-300">1st March, 2025</p>
                   </div>
 
                   <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
                       <i className="ri-map-pin-line text-[#8a8a8a]"></i>
                       Where
                     </h3>
@@ -326,7 +326,7 @@ const Home = () => {
                   </div>
 
                   <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
                       <i className="ri-directions-line text-[#8a8a8a]"></i>
                       How to get there
                     </h3>
@@ -340,7 +340,7 @@ const Home = () => {
                   </div>
 
                   <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
                       <i className="ri-quill-pen-line text-[#8a8a8a]"></i>A Note
                       from the Chair
                     </h3>
