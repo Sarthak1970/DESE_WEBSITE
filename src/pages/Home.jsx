@@ -24,7 +24,7 @@ import EventTimeline from "../components/EventTimeline";
 const Home = () => {
   return (
     <>
-      <div className="relative z-0 min-h-screen bg-[#030418] ">
+      <div className="relative z-0 min-h-screen bg-gradient-to-b from-[#030418] to-[#0a0b2e]">
         <div className="fixed z-[-1] inset-0 bg-[#030418]/50">
           <img
             src={IISCBuilding}
@@ -37,87 +37,54 @@ const Home = () => {
           />
         </div>
 
-        <div id="hero" className="relative h-screen">
+        <div id="hero" className="relative min-h-screen">
           <FloatingShape />
 
-          {/* DESE Logo (Top Right) */}
+          {/* IISC Logo (Top Right) */}
           <img
             src={IISCMasterSealBlack}
-            alt="DESE Logo"
-            className="absolute top-6 right-6 h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
+            alt="IISC Logo"
+            className="absolute top-4 sm:top-6 md:top-8 right-4 sm:right-6 md:right-8 h-[50px] sm:h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
             style={{
-              filter:
-                "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
+              filter: "brightness(0) invert(1)",
             }}
           />
-          <div className="absolute left-4 top-25 transform -translate-y-1/2">
+
+          {/* DESE Logo (Top Left) */}
+          <div className="absolute left-4 sm:left-6 md:left-8 top-4 sm:top-6 md:top-8">
             <img
               src={DESELogoLeft}
-              alt="Falied to load image"
-              className="h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
+              alt="DESE Logo"
+              className="h-[50px] sm:h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
               style={{
-                filter:
-                  "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%) brightness(0) invert(1)",
+                filter: "brightness(0) invert(1)",
               }}
             />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-            {/* Wrapper for logos */}
+          <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 md:px-8">
             <div className="relative flex flex-col items-center">
-              {/* DESE Logo (Fixed Size) */}
-              {/* <img
-                src={DeseLogo}
-                alt="DESE Logo"
-                className="absolute left-1/2 -top-12 transform -translate-x-1/2 max-w-[300px]"
-                style={{
-                  left: "calc(1 / 2 * 43%)",
-                  top: "calc(var(--spacing) * -34)",
-                  filter:
-                    "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
-                }}
-              /> */}
-
-              {/* Open Day Logo (Hover Effect) */}
               <div className="animate-fade-in-up animate-duration-1000 animate-ease-in-out">
                 <img
                   src={OpenDaySvg}
                   alt="Open Day Logo"
-                  className="h-[250px] mb-8 transform transition-transform duration-300 hover:scale-110"
+                  className="h-[150px] sm:h-[200px] md:h-[250px] mb-8 transform transition-all duration-300 hover:scale-110 hover:brightness-125"
                 />
               </div>
-            
             </div>
-            
-            {/* <div className="flex gap-4 animate-fade-in-up animate-delay-500">
-                      <Button
-                      variant="primary"
-                      className="bg-opacity-20 border border-[#2E2388] hover:shadow-[#2E2388]/30"
-                      >
-                      Register Now
-                      </Button>
-                      <Button
-                      variant="secondary"
-                      className="bg-white/10 border border-white/20 hover:shadow-white/20"
-                      onClick={() => {
-                        document.getElementById('about-dese').scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      >
-                      Learn More
-                      </Button>
-                    </div> */}
-
             <div
-              className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer "
+              className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer group"
               onClick={() => {
                 const nextSection = document.getElementById("event-highlights");
                 nextSection.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              <h2 className="text-white text-2xl font-bold mb-4 text-center">1st MARCH, 2025 | 9AM-5PM</h2>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-center bg-clip-text bg-gradient-to-r from-white to-blue-400 text-transparent">
+                1st MARCH, 2025 | 9AM-5PM
+              </h2>
 
               <svg
-                className="w-8 h-8 text-center text-white hover:text-[#2E2388] transition-colors"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto text-white group-hover:text-blue-400 transition-colors duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -134,35 +101,17 @@ const Home = () => {
         </div>
 
         {/* About DESE Section */}
-        <div id="about-dese" className="relative py-32 px-4 overflow-hidden">
+        <div id="about-dese" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-5"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#f8f7ff] to-[#848cd9] animate-text-glow">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-text-glow">
               About Us
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                {/* <p
-                      className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-white/20 shadow-[0_0_20px_rgba(66,49,183,0.2)] 
-                    hover:border-white hover:shadow-[0_0_30px_rgba(66,49,183,0.4)] hover:scale-105 transition-all duration-300"
-                    >
-                      The Department of Electronic Systems Engineering (DESE),
-                      formerly CEDT, was established in 1974 with a vision to
-                      achieve excellence in research and education in electronic
-                      systems engineering.
-                    </p>
-                    <p
-                      className="text-gray-300 text-xl leading-relaxed bg-[#030418]/50 p-6 rounded-xl backdrop-blur-sm border border-white/20 shadow-[0_0_20px_rgba(66,49,183,0.2)] 
-                    hover:border-white hover:shadow-[0_0_30px_rgba(66,49,183,0.4)] hover:scale-105 transition-all duration-300"
-                    >
-                      Our department focuses on training engineers, fostering
-                      collaboration with the electronics industry in India, and
-                      making a positive societal impact through innovative research
-                      and development.
-                    </p> */}
-                <p className="text-white text-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+              <div className="space-y-6 sm:space-y-8">
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed bg-[#0a0b2e]/80 p-6 sm:p-8 rounded-xl backdrop-blur-sm border border-white/10 shadow-lg hover:border-white/30 hover:shadow-blue-500/20 transition-all duration-300">
                   IISc's Open Day is an annual event when the Institute opens
                   its doors for the general public to visit, learn, question,
                   and understand various technological projects and research
@@ -177,41 +126,44 @@ const Home = () => {
               </div>
               <div className="relative group">
                 <div className="absolute rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-1 rounded-2xl overflow-hidden">
+                <div className="relative p-1 rounded-2xl overflow-hidden shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
                   <Gallery />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Events Timeline */}
+
+        {/* Countdown Section */}
         <div
           id="countdown"
-          className="relative py-16 md:py-32 overflow-hidden flex justify-center items-center"
+          className="relative py-12 sm:py-16 md:py-32 overflow-hidden flex justify-center items-center"
         >
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-5"></div>
           </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 flex flex-col items-center">
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col items-center">
             <CountdownTimer />
           </div>
         </div>
+
+        {/* Events Section */}
         <div id="Events" className="events-section">
           <Event />
         </div>
         <EventTimeline />
 
         {/* Research Section */}
-        <div id="research" className="relative py-16 md:py-32 px-4">
+        <div id="research" className="relative py-12 sm:py-16 md:py-32 px-4 sm:px-6 md:px-8">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-5"></div>
           </div>
           <div className="relative z-10 max-w-8xl mx-auto"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4">
-            <h2 className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#b584fd] to-[#0096c7] animate-text-glow  hover:border-[#6354C3]/50 transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_5px_rgba(155,93,229,0.3)">
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 animate-text-glow">
               Research Areas
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8  hover:border-[#6354C3]/50 transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_5px_rgba(155,93,229,0.3)">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   title: "Signal Processing",
@@ -234,60 +186,58 @@ const Home = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-[#030418]/50 p-8 rounded-2xl backdrop-blur-sm border border-[#2E2388]/20 hover:border-[#2E2388]/50 transition-all duration-300 overflow-hidden"
+                  className="group relative bg-[#0a0b2e]/80 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-blue-500/20"
                 >
-                  <div className="absolute inset-0 bg-[#2E2388]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <i
-                      className={`${item.icon} text-4xl mb-4 text-[#2E2388]`}
+                      className={`${item.icon} text-3xl sm:text-4xl mb-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300`}
                     ></i>
-                    <h3 className="text-2xl font-bold mb-4 text-white">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                       {item.description}
                     </p>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
         {/* Gallery Section */}
-        <div className="py-20 px-4 max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">
+        <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Gallery
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <img
-              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg"
-              alt="Gallery 1"
-              className="rounded-lg"
-            />
-            <img
-              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg"
-              alt="Gallery 2"
-              className="rounded-lg"
-            />
-            <img
-              src="https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
-              alt="Gallery 3"
-              className="rounded-lg"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            {[
+              "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg",
+              "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg",
+              "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
+            ].map((src, index) => (
+              <div key={index} className="transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
+                <img
+                  src={src}
+                  alt={`Gallery ${index + 1}`}
+                  className="rounded-lg w-full h-48 sm:h-64 md:h-72 object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
         <div id="team">
           <Team />
         </div>
-        <div className="mt-20 max-w-6x1 mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white bg-gradient-to-r from-[#8a8a8a] to-[#6c6c6c]/70 bg-clip-text">
+        <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Locate Us
           </h2>
-          <div className="grid mb-0 grid-cols-1 md:grid-cols-2 gap-12 bg-[1d1e19] p-8 rounded-xl border border-[#8a8a8a]/20 backdrop-blur-sm transform">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-sm">
             {/* Map Section */}
-            <div className="h-[750px] rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div className="h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
                 width="100%"
@@ -301,71 +251,53 @@ const Home = () => {
 
             {/* Location Details */}
             <div id="location">
-              <div className="space-y-8 text-white">
-                {/* Location Details */}
-                <div className="space-y-8 text-white hover:scale-105 transition-transform duration-300 text-center">
-                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
-                      <i className="ri-map-pin-line text-[#8a8a8a] "></i>
-                      When
+              <div className="space-y-4 text-white">
+                {[
+                  {
+                    title: "When",
+                    icon: "ri-calendar-line",
+                    content: "1st March, 2025"
+                  },
+                  {
+                    title: "Where",
+                    icon: "ri-map-pin-line",
+                    content: `Department of Electronic Systems,
+                    INDIAN INSTITUTE OF SCIENCE,
+                    Mathikere, Bengaluru,
+                    Karnataka 560012`
+                  },
+                  {
+                    title: "How to get there",
+                    icon: "ri-directions-line",
+                    content: "IISc is often locally referred to as the Tata Institute. It is better to use the name Tata Institute with the taxi, auto-rickshaw drivers, and bus conductors. Inside the institute, we have enough banners for directions to reach our department DESE."
+                  },
+                  {
+                    title: "A Note from the Chair",
+                    icon: "ri-quill-pen-line",
+                    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem dolore vero fugiat quia quisquam pariatur laborum laudantium iste, laboriosam sapiente nam nesciunt quo reiciendis eligendi, quae, cupiditate ex possimus saepe id officia."
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="p-4 sm:p-6 bg-[#0a0b2e] rounded-lg border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.01]">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 flex items-center gap-2 text-blue-300">
+                      <i className={`${item.icon} text-blue-400`}></i>
+                      {item.title}
                     </h3>
-                    <p className="text-gray-300">1st March, 2025</p>
-                  </div>
-
-                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
-                      <i className="ri-map-pin-line text-[#8a8a8a]"></i>
-                      Where
-                    </h3>
-                    <p className="text-gray-300">
-                      Department of Electronic Systems, <br />
-                      INDIAN INSTITUTE OF SCIENCE, <br />
-                      Mathikere, Bengaluru, <br />
-                      Karnataka 560012
+                    <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line">
+                      {item.content}
                     </p>
                   </div>
-
-                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
-                      <i className="ri-directions-line text-[#8a8a8a]"></i>
-                      How to get there
-                    </h3>
-                    <p className="text-gray-300">
-                      IISc is often locally referred to as the Tata Institute.
-                      It is better to use the name Tata Institute with the taxi,
-                      auto-rickshaw drivers, and bus conductors. Inside the
-                      institute, we have enough banners for directions to reach
-                      our department DESE.
-                    </p>
-                  </div>
-
-                  <div className="p-6 bg-[#292d63] rounded-lg border border-[#8a8a8a]/20 hover:border-[#8a8a8a]/50 transition-all">
-                    <h3 className="text-2xl font-bold mb-3 items-center gap-2">
-                      <i className="ri-quill-pen-line text-[#8a8a8a]"></i>A Note
-                      from the Chair
-                    </h3>
-                    <p className="text-gray-300 italic">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eveniet exercitationem dolore vero fugiat quia quisquam
-                      pariatur laborum laudantium iste, laboriosam sapiente nam
-                      nesciunt quo reiciendis eligendi, quae, cupiditate ex
-                      possimus saepe id officia. Exercitationem quae aspernatur
-                      accusamus asperiores fugit quidem at deserunt, libero
-                      voluptates minus, amet repudiandae eos ipsa consequuntur
-                      quam nemo officiis esse? Ratione, natus.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
+        </div>
 
           {/* Sponsors Section */}
-          <div id="sponsors-section" className="mt-12">
+          <div id="sponsors-section" className="mt-8 sm:mt-10 md:mt-12">
             <Sponsors />
           </div>
         </div>
-      </div>
+      
     </>
   );
 };
