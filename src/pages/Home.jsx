@@ -31,8 +31,8 @@ const Home = () => {
             alt="IISC Building"
             className="fixed w-full h-full object-contain object-center"
             style={{
-              filter: "brightness(0) invert(1)", 
-              opacity: 0.15,
+              filter: "brightness(0) invert(1)",
+              opacity: 0.25, 
             }}
           />
         </div>

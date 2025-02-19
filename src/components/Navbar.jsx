@@ -32,7 +32,12 @@ const Navbar = () => {
 
     const handleNavClick = (item) => {
         if (item.isPage) {
-            navigate(item.href);
+            if (item.href === '/') {
+                navigate('/');
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on Home
+            } else {
+                navigate(item.href);
+            }
         } else {
             if (location.pathname !== '/') {
                 navigate('/');
@@ -52,6 +57,7 @@ const Navbar = () => {
         setActiveLink(item.name);
         setIsMenuOpen(false);
     };
+    
 
     useEffect(() => {
         const handleScroll = () => {
