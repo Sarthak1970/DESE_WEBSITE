@@ -27,7 +27,7 @@ const Gallery = () => {
     if (!isPaused) {
       intervalId = setInterval(() => {
         scrollGallery('right');
-      }, 5000); // Change image every 5 seconds
+      }, 3000); 
     }
 
     return () => {
@@ -45,7 +45,7 @@ const Gallery = () => {
     >
       {/* Navigation Buttons */}
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/60 p-3 rounded-full hover:bg-pink-400/70 transition-all z-30"
+        className="absolute left-4 top-1/2 transform -translate-x-1/2 bg-black/60 p-3 rounded-full hover:bg-pink-400/70 transition-all z-30"
         onClick={() => scrollGallery('left')}
       >
         <ChevronLeft className="text-white w-6 h-6" />

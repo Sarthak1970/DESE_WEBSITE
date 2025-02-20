@@ -108,26 +108,26 @@ const Home = () => {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-text-glow">
-              About Us
+              About DESE
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div className="space-y-6 sm:space-y-8">
-                <p className="text-base sm:text-lg text-gray-200 leading-relaxed bg-[#0a0b2e]/80 p-6 sm:p-8 rounded-xl backdrop-blur-sm border border-white/10 shadow-lg hover:border-white/30 hover:shadow-blue-500/20 transition-all duration-300">
-                  IISc's Open Day is an annual event when the Institute opens
-                  its doors for the general public to visit, learn, question,
-                  and understand various technological projects and research
-                  that is going on. It's designed to inspire scientific
-                  curiosity in people of all ages. On this day, the institute
-                  opens its doors to the public, offering a glimpse into
-                  cutting-edge research and innovations. DESE (formerly known as
-                  CEDT) gladly invites students, professors, lecturers from
-                  various academic institutions, and professionals from the
-                  industry. We look forward to seeing you!
-                </p>
-              </div>
-              <div className="relative group">
+            <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-8 md:space-y-0">
+              {/* Text Section - 40% */}
+                <div className="w-full md:w-2/5 text-center md:text-left">
+                  <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-6 sm:p-8 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300">
+                  IISc's Open Day is an annual when the Institute opens its door for general public to visit, learn,
+                  question and understand various technological projects and research that is going on. Its
+                  designed to inspire scientific curiosity in people of all ages. On this day, the institute opens its
+                  doors to the public, oƯering a glimpse into cutting-edge research and innovations.
+                  DESE (formerly known as CEDT) gladly invites students, professors, lecturers from various
+                  academic institutions and professionals from the industry. We look forward to seeing you!
+
+                  </p>
+                </div>
+
+              {/* Gallery Section - 60% */}
+              <div className="relative group w-3/5">
                 <div className="absolute rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-1 rounded-2xl overflow-hidden shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
+                <div className="relative p-1 rounded-2xl overflow-hidden shadow-xl hover:shadow-blue-500/20 transition-all duration-100">
                   <Gallery />
                 </div>
               </div>

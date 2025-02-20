@@ -76,7 +76,7 @@ const goldenJubileeData = [
 
 const GoldenJubilee = () => {
   return (
-    <div className="relative bg-[#0a192f] text-white min-h-screen flex flex-col items-center p-6">
+    <div className="relative bg-gradient-to-b from-[#030418] to-[#0a0b2e] text-white min-h-screen flex flex-col items-center p-6">
       {/* Background Image */}
       <img
         src={IISCBuilding}
@@ -109,7 +109,7 @@ const GoldenJubilee = () => {
             key={index}
             className={`bg-transparent rounded-lg shadow-lg p-6 flex flex-col md:flex-row ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
-            } items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:shadow-lg hover:shadow-blue-900/50 hover:scale-[1.02]`}
+            } items-center justify-start gap-6 transition-all duration-300 border-4 border-transparent hover:shadow-lg hover:scale-[1.02]`}
           >
             <div className="w-full md:w-1/2">
               <img
