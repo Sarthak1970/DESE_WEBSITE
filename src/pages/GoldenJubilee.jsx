@@ -94,7 +94,7 @@ const GoldenJubilee = () => {
         <img
           src={DESELogoLeft}
           alt="DESE Logo"
-          className="absolute top-25 left-20 transform -translate-x-1/2 -translate-y-1/2 h-[70px] md:h-[120px] transition-transform duration-300 hover:scale-110"
+          className="absolute top-25 left-20 transform -translate-x-1/2 -translate-y-1/2 h-[70px] md:h-[80px] transition-transform duration-300 hover:scale-110"
           style={{
             filter:
               "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",

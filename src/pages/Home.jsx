@@ -33,7 +33,7 @@ const Home = () => {
             className="fixed w-full h-full object-contain object-center"
             style={{
               filter: "brightness(0) invert(1)",
-              opacity: 0.25, 
+              opacity: 0.25,
             }}
           />
         </div>
@@ -112,8 +112,8 @@ const Home = () => {
             </h2>
             <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-8 md:space-y-0">
               {/* Text Section - 40% */}
-                <div className="w-full md:w-2/5 text-center md:text-left">
-                  <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-6 sm:p-8 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300">
+              <div className="w-full md:w-2/5 text-center md:text-left">
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-6 sm:p-8 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300">
                   IISc's Open Day is an annual when the Institute opens its door for general public to visit, learn,
                   question and understand various technological projects and research that is going on. Its
                   designed to inspire scientific curiosity in people of all ages. On this day, the institute opens its
@@ -121,8 +121,8 @@ const Home = () => {
                   DESE (formerly known as CEDT) gladly invites students, professors, lecturers from various
                   academic institutions and professionals from the industry. We look forward to seeing you!
 
-                  </p>
-                </div>
+                </p>
+              </div>
 
               {/* Gallery Section - 60% */}
               <div className="relative group w-3/5">
@@ -154,58 +154,7 @@ const Home = () => {
         </div>
         <EventTimeline />
 
-        {/* Research Section */}
-        <div id="research" className="relative py-12 sm:py-16 md:py-32 px-4 sm:px-6 md:px-8">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-[url('/src/assets/circuit-pattern.svg')] opacity-5"></div>
-          </div>
-          <div className="relative z-10 max-w-8xl mx-auto"></div>
-          <div className="relative z-10 max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 animate-text-glow">
-              Research Areas
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-              {[
-                {
-                  title: "Signal Processing",
-                  description:
-                    "Advanced algorithms for signal analysis and processing",
-                  icon: "ri-radar-line",
-                },
-                {
-                  title: "Embedded Systems",
-                  description:
-                    "Design and development of efficient embedded solutions",
-                  icon: "ri-cpu-line",
-                },
-                {
-                  title: "VLSI Design",
-                  description:
-                    "Cutting-edge research in VLSI architecture and design",
-                  icon: "ri-chip-line",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-[#0a0b2e]/80 p-6 sm:p-8 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-blue-500/20"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative z-10">
-                    <i
-                      className={`${item.icon} text-3xl sm:text-4xl mb-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300`}
-                    ></i>
-                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white group-hover:text-blue-200 transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+
 
         {/* Gallery Section */}
         <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
@@ -293,14 +242,14 @@ const Home = () => {
           </div>
         </div>
 
-          {/* Sponsors Section */}
-          <div id="sponsors-section" className="mt-8 sm:mt-10 md:mt-12">
-            <Sponsors />
-          </div>
-      
-        <ScrollToTopButton/>
+        {/* Sponsors Section */}
+        <div id="sponsors-section" className="mt-8 sm:mt-10 md:mt-12">
+          <Sponsors />
+        </div>
+
+        <ScrollToTopButton />
       </div>
-      
+
     </>
   );
 };
