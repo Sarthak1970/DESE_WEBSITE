@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const navItems = [
         { name: 'Home', href: '/', icon: RiHome4Line, isPage: true },
-        { name: 'About Us', href: '#about-dese', icon: RiInformationLine },
+        { name: 'About DESE', href: '#about-dese', icon: RiInformationLine },
         { name: 'Events', href: '#Events', icon: RiCalendarEventLine },
         { name: 'Demos', href: '/demo', icon: RiSlideshowLine, isPage: true },
         { name: 'Schedule', href: '#schedule', icon: RiTimeLine },
