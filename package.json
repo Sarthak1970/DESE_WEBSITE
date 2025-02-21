@@ -1,9 +1,12 @@
 {
   "name": "dese",
   "private": true,
-  "type":"module",
+  "type": "module",
   "babel": {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   },
   "version": "0.0.0",
   "scripts": {
@@ -21,6 +24,7 @@
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.1.5",
     "react-scroll": "^1.9.2",
     "tailwindcss": "^4.0.6"
