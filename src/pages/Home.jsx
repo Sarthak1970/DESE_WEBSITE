@@ -20,12 +20,11 @@ import Team from "../components/Team";
 import IISCMasterSealBlack from "../assets/IISC MasterSealBlack.svg";
 import DeseLogo from "../assets/DeseLogo.svg";
 import EventTimeline from "../components/EventTimeline";
-import ScrollToTopButton from "../components/Scrolltotopbutton";
 
 const Home = () => {
   return (
     <>
-      <ScrollToTopButton />      <div className="relative z-0 min-h-screen bg-gradient-to-b from-[#030418] to-[#0a0b2e]">
+      <div className="relative z-0 min-h-screen bg-gradient-to-b from-[#030418] to-[#0a0b2e]">
         <div className="fixed z-[-1] inset-0 bg-[#030418]/50">
           <img
             src={IISCBuilding}
@@ -247,7 +246,6 @@ const Home = () => {
           <Sponsors />
         </div>
 
-        <ScrollToTopButton />
       </div>
 
     </>
