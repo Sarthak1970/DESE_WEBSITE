@@ -25,29 +25,29 @@ const FloatingShape = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden">
-      {/* Snowfall container */}
-      <div className="snowfall-container absolute inset-0 z-10">
-        <style>
-          {`
-            .snowflake {
-              position: absolute;
-              background: white;
-              border-radius: 50%;
-              pointer-events: none;
-              animation: snowfall linear forwards;
-            }
+    //   {/* Snowfall container */}
+    {/* //   <div className="snowfall-container absolute inset-0 z-10">
+    //     <style>
+    //       {`
+    //         .snowflake {
+    //           position: absolute;
+    //           background: white;
+    //           border-radius: 50%;
+    //           pointer-events: none;
+    //           animation: snowfall linear forwards;
+    //         }
 
-            @keyframes snowfall {
-              0% {
-                transform: translateY(-10vh) rotate(0deg);
-              }
-              100% {
-                transform: translateY(100vh) rotate(360deg);
-              }
-            }
-          `}
-        </style>
-      </div>
+    //         @keyframes snowfall {
+    //           0% {
+    //             transform: translateY(-10vh) rotate(0deg);
+    //           }
+    //           100% {
+    //             transform: translateY(100vh) rotate(360deg);
+    //           }
+    //         }
+    //       `}
+    //     </style>
+    //   </div> */}
 
       {/* Background shapes */}
       <div
@@ -60,6 +60,7 @@ const FloatingShape = () => {
           transition: "background 10s ease-in-out",
         }}
       />
+
 
       <div
         className="absolute bottom-[-30vh] right-[-20vw] z-0 blur-[60px]"
