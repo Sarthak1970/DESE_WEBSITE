@@ -7,7 +7,10 @@ const Gallery = () => {
 
   // Using placeholder images instead of external URLs
   const images = [
-      'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg','https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg','https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg','https://res.cloudinary.com/dosnuagvu/image/upload/v1739555533/Images_in_about_us_p3-min_bq9ywj.jpg'
+      'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg',
+      'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg',
+      'https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg',
+      'https://res.cloudinary.com/dosnuagvu/image/upload/v1739555533/Images_in_about_us_p3-min_bq9ywj.jpg'
   ];
 
   const scrollGallery = useCallback((direction) => {
@@ -27,7 +30,7 @@ const Gallery = () => {
     if (!isPaused) {
       intervalId = setInterval(() => {
         scrollGallery('right');
-      }, 3000); 
+      }, 2000); 
     }
 
     return () => {
@@ -63,10 +66,10 @@ const Gallery = () => {
         {images.map((src, index) => (
           <div
             key={index}
-            className="absolute top-0 left-0 h-full w-full transition-opacity duration-500 ease-in-out"
+            className={`absolute top-0 left-0 h-full w-full transition-transform duration-500 ease-in-out ${currentIndex === index ? 'rotate-y-0' : 'rotate-y-180'}`}
             style={{
-              opacity: currentIndex === index ? 1 : 0,
               zIndex: currentIndex === index ? 10 : 0,
+              transform: currentIndex === index ? 'rotateY(0deg)' : 'rotateY(180deg)',
             }}
           >
             <img
