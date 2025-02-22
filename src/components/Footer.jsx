@@ -1,5 +1,5 @@
 import DeseLogo from "../assets/DeseLogo.svg"
-
+``
 const Footer = () => {
   return (
     <footer className="bg-[#030418] border-t border-white/10 backdrop-blur-sm">

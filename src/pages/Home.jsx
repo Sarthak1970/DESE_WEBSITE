@@ -1,4 +1,4 @@
-<div className="mt-20 max-w-6x1 mx-auto px-4"></div>;
+import React, { useState, useEffect } from 'react';
 import {
   RiCalendarEventLine,
   RiMapPinLine,
@@ -20,8 +20,28 @@ import Team from "../components/Team";
 import IISCMasterSealBlack from "../assets/IISC MasterSealBlack.svg";
 import DeseLogo from "../assets/DeseLogo.svg";
 import EventTimeline from "../components/EventTimeline";
+import { RiArrowUpSLine } from "@remixicon/react";
+import MainGallary from "../components/MainGallary.jsx";
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    setIsVisible(offset > 100); // Show button after scrolling down 300px
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="relative z-0 min-h-screen bg-gradient-to-b from-[#030418] to-[#0a0b2e]">
@@ -39,6 +59,17 @@ const Home = () => {
 
         <div id="hero" className="relative min-h-screen">
           <FloatingShape />
+
+          {/* Back to Top Button */}
+          {isVisible && (
+            <button 
+              onClick={scrollToTop}
+              className="fixed bottom-10 text-2xl right-10 z-50 bg-[#2E2388] text-white p-5 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
+              aria-label="Back to top"
+            >
+              <RiArrowUpSLine className="w-8 h-8 " />
+            </button>
+          )}
 
           {/* IISC Logo (Top Right) */}
           <img
@@ -106,20 +137,18 @@ const Home = () => {
             <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-5"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 animate-text-glow">
-              About DESE
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FFA500]">
+                Step Into the Future with DESE!
+              </span>
             </h2>
             <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-8 md:space-y-0">
               {/* Text Section - 40% */}
               <div className="w-full md:w-2/5 text-center md:text-left">
-                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-6 sm:p-8 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300">
-                  IISc's Open Day is an annual when the Institute opens its door for general public to visit, learn,
-                  question and understand various technological projects and research that is going on. Its
-                  designed to inspire scientific curiosity in people of all ages. On this day, the institute opens its
-                  doors to the public, oƯering a glimpse into cutting-edge research and innovations.
-                  DESE (formerly known as CEDT) gladly invites students, professors, lecturers from various
-                  academic institutions and professionals from the industry. We look forward to seeing you!
-
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-6 sm:p-8 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-bold">
+                  IISc's Open Day is an annual event when the Institute opens its doors for the public to visit, learn, 
+                  and understand various technological projects and research. DESE (formerly known as CEDT) invites 
+                  students, professors, and professionals from the industry. We look forward to seeing you!
                 </p>
               </div>
 
@@ -131,6 +160,21 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Demos Section */}
+        <div id="demos" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden bg-[#0a0b2e]/50 backdrop-blur-sm rounded-lg shadow-lg">
+          <div className="relative z-10 max-w-7xl mx-auto text-center">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
+              Experience Innovation Up Close!
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10 px-4 sm:px-0">
+              Dive into a showcase of exciting projects and live demonstrations that highlight creativity, technology, and problem-solving in action. Witness how ideas come to life and inspire the future!
+            </p>
+            <Button onClick={() => window.location.href = '/demo'} variant="accent">
+              Learn More
+            </Button>
           </div>
         </div>
 
@@ -153,27 +197,18 @@ const Home = () => {
         </div>
         <EventTimeline />
 
-
-
         {/* Gallery Section */}
-        <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+        <MainGallary />
+
+        {/* A Note from the Chair Section */}
+        <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
-            Gallery
+            A Note from the Chair
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553511/Images_in_about_us_p1_b9avno.jpg",
-              "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553515/Images_in_about_us_p2_jsvalz.jpg",
-              "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553519/Images_in_about_us_p4_oh1yqx.jpg"
-            ].map((src, index) => (
-              <div key={index} className="transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
-                <img
-                  src={src}
-                  alt={`Gallery ${index + 1}`}
-                  className="rounded-lg w-full h-48 sm:h-64 md:h-72 object-cover"
-                />
-              </div>
-            ))}
+          <div className="space-y-4 text-white">
+            <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem dolore vero fugiat quia quisquam pariatur laborum laudantium iste, laboriosam sapiente nam nesciunt quo reiciendis eligendi, quae, cupiditate ex possimus saepe id officia.
+            </p>
           </div>
         </div>
 
@@ -219,19 +254,14 @@ const Home = () => {
                     title: "How to get there",
                     icon: "ri-directions-line",
                     content: "IISc is often locally referred to as the Tata Institute. It is better to use the name Tata Institute with the taxi, auto-rickshaw drivers, and bus conductors. Inside the institute, we have enough banners for directions to reach our department DESE."
-                  },
-                  {
-                    title: "A Note from the Chair",
-                    icon: "ri-quill-pen-line",
-                    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem dolore vero fugiat quia quisquam pariatur laborum laudantium iste, laboriosam sapiente nam nesciunt quo reiciendis eligendi, quae, cupiditate ex possimus saepe id officia."
                   }
                 ].map((item, index) => (
-                  <div key={index} className="p-4 sm:p-6 bg-[#0a0b2e] rounded-lg border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.01]">
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 flex items-center gap-2 text-blue-300">
+                  <div key={index} className="mb-4">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 text-center text-blue-300">
                       <i className={`${item.icon} text-blue-400`}></i>
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line">
+                    <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
                       {item.content}
                     </p>
                   </div>
