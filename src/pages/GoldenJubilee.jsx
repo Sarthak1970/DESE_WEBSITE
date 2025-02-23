@@ -77,6 +77,28 @@ const goldenJubileeData = [
 const GoldenJubilee = () => {
   return (
     <div className="relative bg-gradient-to-b from-[#030418] to-[#0a0b2e] text-white min-h-screen flex flex-col items-center p-6">
+      {/* Logo above banner on mobile, absolute on larger screens */}
+      <div className="relative w-full mb-4 sm:mb-0">
+        <img
+          src={DESELogoLeft}
+          alt="DESE Logo"
+          className="h-[70px] md:h-[80px] transition-transform duration-300 hover:scale-110 mx-auto sm:absolute sm:top-25 sm:left-20 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2"
+          style={{
+            filter:
+              "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
+          }}
+        />
+      </div>
+
+      {/* Banner shifted down with margin */}
+      <div className="bg-gradient-to-r from-amber-800 to-amber-400 text-white text-center py-4 sm:py-6 md:py-8 mt-16 sm:mt-20 md:mt-24">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-2 sm:gap-4">
+          <span className="text-lg sm:text-xl md:text-2xl font-bold">
+            50 Years of Excellence & The Journey of CEDT to DESE
+          </span>
+        </div>
+      </div>
+
       {/* Background Image */}
       <img
         src={IISCBuilding}
@@ -89,21 +111,8 @@ const GoldenJubilee = () => {
         }}
       />
 
-      {/* Golden Jubilee Logo */}
-      <div className="mb-16">
-        <img
-          src={DESELogoLeft}
-          alt="DESE Logo"
-          className="absolute top-25 left-20 transform -translate-x-1/2 -translate-y-1/2 h-[70px] md:h-[80px] transition-transform duration-300 hover:scale-110"
-          style={{
-            filter:
-              "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
-          }}
-        />
-      </div>
-
       {/* Content Section */}
-      <div className="space-y-10 w-full max-w-5xl">
+      <div className="space-y-10 w-full max-w-5xl mt-8">
         {goldenJubileeData.map((item, index) => (
           <div
             key={index}
