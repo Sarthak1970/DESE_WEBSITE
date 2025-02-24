@@ -1,36 +1,73 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { RiCalendarEventLine, RiMapPinLine, RiTimeLine } from "@remixicon/react";
+import Event1 from "../assets/Event/1.png"
+import Event2 from "../assets/Event/2.png"
+import Event3 from "../assets/Event/3.png"
+import Event4 from "../assets/Event/4.png"
+import Event5 from "../assets/Event/5.png"
+import Event6 from "../assets/Event/6.png"
 
 const eventsData = [
   {
     id: 1,
-    title: "Line Follower Robot Contest",
-    date: "01-03-2025", 
-    location: "DESE IISc",
-    description: "DESE invites you to participate in the Line Follower Robot Contest a perfect chance to showcase your robotics and technical skills! ",
-    image: "https://res.cloudinary.com/dosnuagvu/image/upload/v1739553514/LFR_poster_DESE_openday25_bjyoer.png",
-    type: "exhibition",
-    Contact:"Shivam 88391-43990 ,Meenakshi 91108-29943"
+    title: "Laser Labyrinth",
+    date: "01-Mar-2025",
+    location: "Room 129, DESE",
+    // description: "Explore our state-of-the-art Smart Grid laboratory featuring renewable energy integration and power system demonstrations.",
+    image: Event1,
+    type: "tour",
+    Contact: "Dr. Ramesh Kumar - 98765 43210"
   },
   {
     id: 2,
-    title: "Robotics Workshop",
-    date: "2025-3-1",
-    time: "9:00 AM - 1:00 PM",
-    location: "Engineering Lab 101",
-    description: "Hands-on workshop on robotics and automation systems.",
-    image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
-    type: "workshop"
+    title: "Drone Flying",
+    date: "01-Mar-2025",
+    time: "10:00 AM - 4:00 PM",
+    location: "DESE Front Lawn",
+    // description: "Live demonstrations of cutting-edge embedded systems and IoT applications developed by our students.",
+    image: Event2,
+    type: "exhibition"
   },
   {
     id: 3,
-    title: "AI Seminar",
-    date: "01-03-2025",
-    time: "2:00 PM - 5:00 PM",
-    location: "Conference Hall",
-    description: "Insightful talks on the future of artificial intelligence and machine learning.",
-    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+    title: "Musical Staircase",
+    date: "01-Mar-2025",
+    time: "11:00 AM - 1:00 PM",
+    location: "2nd Floor Staircase",
+    // description: "Interactive session on machine learning applications in medical diagnostics and healthcare systems.",
+    image: Event3,
+    type: "workshop",
+    Contact: "Prof. Ananya Sharma - 99876 54321"
+  },
+  {
+    id: 4,
+    title: "Kid Zone ",
+    date: "01-Mar-2025",
+    time: "9:30 AM - 5:00 PM", 
+    location: "NPTEL Office",
+    // description: "Experience our autonomous robots and robotic arm demonstrations for industrial automation applications.",
+    image: Event4,
+    type: "exhibition"
+  },
+  {
+    id: 5,
+    title: "virtual Shooting",
+    date: "01-Mar-2025",
+    location: "Room 137, DESE",
+    // description: "Display of advanced VLSI chip designs and fabrication techniques developed through student projects.",
+    image: Event5,
+    type: "exhibition",
+    Contact: "Dr. Sanjay Patel - 97788 66554"
+  },
+  {
+    id: 6,
+    title: "Maze Runner",
+    date: "01-Mar-2025", 
+    time: "2:30 PM - 4:00 PM",
+    location: "Room 134, DESE",
+    // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
+    image: Event6,
     type: "seminar"
   }
 ];
@@ -162,10 +199,10 @@ const Event = () => {
                   <span>{selectedEvent.location}</span>
                 </div>
 
-                <div className="pt-4">
+                {/* <div className="pt-4">
                   <h4 className="text-xl font-semibold text-white mb-2">Description</h4>
                   <p className="text-gray-300">{selectedEvent.description}</p>
-                </div>
+                </div> */}
 
                 {selectedEvent.Contact && (
                   <div className="pt-2">
