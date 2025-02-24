@@ -31,7 +31,7 @@ const Sponsors = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2 sm:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text  bg-gradient-to-r  from-white to-[#FFA500] z-10000">
             Our Sponsors
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">

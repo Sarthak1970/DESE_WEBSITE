@@ -253,7 +253,7 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
         <div id="team">
           <Team />
         </div>
-        <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div  className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Locate Us
           </h2>
@@ -272,7 +272,7 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
             </div>
 
             {/* Location Details */}
-            <div id="location">
+            <div id="location" >
               <div className="space-y-4 text-white">
                 {[
                   {
@@ -299,12 +299,12 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
                       <i className={`${item.icon} text-blue-400`}></i>
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
+                    <p  className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
                       {item.content}
                     </p>
                   </div>
                 ))}
-              </div>
+              </div >
             </div>
           </div>
         </div>
