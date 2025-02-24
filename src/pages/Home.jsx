@@ -22,6 +22,7 @@ import DeseLogo from "../assets/DeseLogo.svg";
 import EventTimeline from "../components/EventTimeline";
 import { RiArrowUpSLine } from "@remixicon/react";
 import MainGallary from "../components/MainGallary.jsx";
+import chair from "../assets/ChairMan.jpg";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -201,14 +202,47 @@ const Home = () => {
         <MainGallary />
 
         {/* A Note from the Chair Section */}
-        <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
-            A Note from the Chair
-          </h2>
-          <div className="space-y-4 text-white">
-            <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem dolore vero fugiat quia quisquam pariatur laborum laudantium iste, laboriosam sapiente nam nesciunt quo reiciendis eligendi, quae, cupiditate ex possimus saepe id officia.
-            </p>
+        <div className="mt-12 mb-20 z-10 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="relative  p-8 sm:p-12 rounded-3xl shadow-2xl hover:shadow-[0_8px_30px_rgba(125,67,255,0.3)] transition-all duration-500">
+            <div className="absolute inset-0 border border-white/10 rounded-3xl backdrop-blur-lg"></div>
+            
+            <h2 className="text-3xl sm:text-4xl relative z-100 font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-pink-400 animate-text-shimmer">
+              Message from the Chair
+            </h2>
+
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 relative">
+              <div className="group relative w-full lg:w-2/5">
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <img 
+                  src={chair} 
+                  alt="Chairperson" 
+                  className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-2xl ring-4 ring-white/10 transform transition-all duration-500 group-hover:scale-102 group-hover:ring-purple-300/30"
+                />
+              </div>
+
+              <div className="flex-1 space-y-6 text-white relative">
+                <svg 
+                  className="absolute -top-6 -left-6 w-16 h-16 text-purple-300/20" 
+                  viewBox="0 0 24 24" 
+                  fill="currentColor"
+                >
+                  <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.921c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.921c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
+                </svg>
+                
+                <p className="text-lg sm:text-xl leading-relaxed font-medium text-gray-200 text-center lg:text-left italic">
+                  "A warm welcome to the OPEN DAY event. The department is 51 years old. For over half a century, we have been a beacon in electronic systems. This open day, we open our doors to share with you the exciting work we are doing and the bright future that we are building. 
+
+We showcase our students' talents, faculty's expertise, and cutting-edge research happening in the department. It is a testament to the dedication of generations of faculty, the brilliance of our students, and the unwavering support of our alumni. You may find a few pleasant surprises this time. Visit us and get inspired."
+                </p>
+
+                <div className="text-right mt-8">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent">
+                  Prof.  L.Umanand
+                  </h3>
+                  <p className="text-sm text-purple-200/80">Chairperson, DESE Open Day</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
