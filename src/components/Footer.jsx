@@ -8,14 +8,14 @@ const Footer = () => {
         <div className="bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
           <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">Quick Links</h3>
           <ul className="space-y-2 text-center sm:text-left">
-            <li>
+            {/* <li>
               <a
                 href="#research"
                 className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base"
               >
                 Research
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#event-highlights"
