@@ -89,7 +89,7 @@ const Home = () => {
               alt="DESE Logo"
               className="h-[50px] sm:h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
               style={{
-                filter: "brightness(0) invert(1)",
+                filter:               "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
               }}
             />
           </div>
@@ -146,7 +146,10 @@ const Home = () => {
             <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-8 md:space-y-0">
               {/* Text Section - 40% */}
               <div className="w-full md:w-2/5 text-center md:text-left">
-                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-6 sm:p-8 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-bold">
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold">
+                  DESE (formerly known as CEDT) invites students.
+                </p>
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold">
                   IISc's Open Day is an annual event when the Institute opens its doors for the public to visit, learn, 
                   and understand various technological projects and research. DESE (formerly known as CEDT) invites 
                   students, professors, and professionals from the industry. We look forward to seeing you!
@@ -173,8 +176,9 @@ const Home = () => {
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10 px-4 sm:px-0">
               Dive into a showcase of exciting projects and live demonstrations that highlight creativity, technology, and problem-solving in action. Witness how ideas come to life and inspire the future!
             </p>
-            <Button onClick={() => window.location.href = '/demo'} variant="accent">
-              Learn More
+            <Button onClick={() => window.location.href = '/demo'} variant="accent"
+              className='py-1 px-2'>
+              Go to Demos page
             </Button>
           </div>
         </div>
@@ -239,7 +243,7 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
                   <h3 className="text-xl font-bold bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent">
                   Prof.  L.Umanand
                   </h3>
-                  <p className="text-sm text-purple-200/80">Chairperson, DESE Open Day</p>
+                  <p className="text-sm text-purple-200/80">Chair, DESE</p>
                 </div>
               </div>
             </div>

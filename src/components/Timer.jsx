@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 const CountdownTimer = () => {
     const calculateTimeLeft = useCallback(() => {
-        const eventDate = new Date('2025-03-22T00:00:00');
+        const eventDate = new Date('2025-03-01T00:00:00');
         const now = new Date();
         const difference = eventDate - now;
 
@@ -30,7 +30,7 @@ const CountdownTimer = () => {
 
     return (
         <section className="relative flex flex-col items-center justify-center bg-transparent w-full h-full text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#e0d4ff] to-[#e0d4ff] mb-6">
+            <h2 className="text-5xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#e0d4ff] to-[#e0d4ff] mb-6">
                 <i className="ri-hourglass-line animate-pulse text"></i> Countdown to Open Day <i className="ri-hourglass-line animate-pulse"></i>
             </h2>
             <div className="flex gap-2 md:gap-3 justify-center items-center flex-wrap">

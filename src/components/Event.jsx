@@ -86,7 +86,7 @@ const Event = () => {
 
   return (
     <div id="event-highlights" className="relative py-20 md:py-40 px-6 ">
-      <div className="max-w-8xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ const Event = () => {
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain transform transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="relative z-20 p-6 -mt-10">
@@ -162,7 +162,7 @@ const Event = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-[#0a0f2d] rounded-2xl p-6 md:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto relative border border-[#b584fd]/30"
+              className="bg-[#0a0f2d] rounded-2xl p-6 md:p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto relative border border-[#b584fd]/30"
             >
               <button 
                 onClick={() => setSelectedEvent(null)}
@@ -176,12 +176,12 @@ const Event = () => {
               <img 
                 src={selectedEvent.image} 
                 alt={selectedEvent.title}
-                className="w-full h-64 object-cover rounded-xl mb-6"
+                className="w-full h-64 object-contain rounded-xl mb-6"
               />
 
               <h3 className="text-3xl font-bold text-white mb-4">{selectedEvent.title}</h3>
               
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-2 text-gray-300">
                 <div className="flex items-center gap-3">
                   <RiCalendarEventLine className="w-5 h-5 text-[#b584fd]" />
                   <span>{selectedEvent.date}</span>

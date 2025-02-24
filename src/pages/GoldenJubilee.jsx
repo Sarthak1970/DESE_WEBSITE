@@ -78,7 +78,7 @@ const GoldenJubilee = () => {
   return (
     <div className="relative bg-gradient-to-b from-[#030418] to-[#0a0b2e] text-white min-h-screen flex flex-col items-center p-6">
       {/* Logo above banner on mobile, absolute on larger screens */}
-      <div className="relative w-full mb-4 sm:mb-0">
+      <div className="w-full mb-4 sm:mb-0">
         <img
           src={DESELogoLeft}
           alt="DESE Logo"
@@ -90,10 +90,9 @@ const GoldenJubilee = () => {
         />
       </div>
 
-      {/* Banner shifted down with margin */}
-      <div className="bg-gradient-to-r from-amber-800 to-amber-400 text-white text-center py-4 sm:py-6 md:py-8 mt-16 sm:mt-20 md:mt-24">
+      <div className="bg-transparent text-amber-600 text-center py-4 sm:py-6 md:py-8 mt-16 sm:mt-20 md:mt-24">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-2 sm:gap-4">
-          <span className="text-lg sm:text-xl md:text-2xl font-bold">
+          <span className="text-4xl sm:text-2xl md:text-4xl font-bold">
             50 Years of Excellence & The Journey of CEDT to DESE
           </span>
         </div>
@@ -128,7 +127,7 @@ const GoldenJubilee = () => {
               />
             </div>
             <div className="w-full md:w-1/2 text-center text-gray-300 md:text-left text-sm md:text-base">
-              <p className="text-lg font-medium">{item.text}</p>
+              <p className="text-lg font-l font-serif">{item.text}</p>
             </div>
           </div>
         ))}
