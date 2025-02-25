@@ -27,7 +27,7 @@ const Navbar = () => {
     { name: "Demos", href: "/demo", icon: RiSlideshowLine, isPage: true },
     { name: "Schedule", href: "#schedule", icon: RiTimeLine, isPage: false },
     { name: "Golden Jubilee", href: "/goldenjubilee", icon: RiMedalLine, isPage: true },
-    { name: "Locate us", href: "#location", icon: RiMapPinLine, isPage: false },
+    { name: "Locate us", href: "#map", icon: RiMapPinLine, isPage: false },
   ];
 
   const handleNavClick = (item) => {

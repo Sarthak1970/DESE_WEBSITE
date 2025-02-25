@@ -177,7 +177,10 @@ const Home = () => {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 sm:mb-12 md:mb-16 text-white">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FFA500]">
+              <span
+                className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#FFA500] "
+                style={{ fontFamily: "Amasis MT Pro, sans-serif" }}
+              >
                 Step Into the Future with DESE!
               </span>
             </h2>
@@ -222,7 +225,7 @@ const Home = () => {
           className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden bg-[#0a0b2e]/50 backdrop-blur-sm rounded-lg shadow-lg"
         >
           <div className="relative z-10 max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
               Experience Innovation Up Close!
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10 px-4 sm:px-0">
@@ -252,6 +255,34 @@ const Home = () => {
           </div>
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col items-center">
             <CountdownTimer />
+          </div>
+        </div>
+        <div>
+          <div className="relative w-full bg-gray-900 text-white py-16 px-6">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-5"></div>
+            </div>
+
+            {/* Video Container */}
+            <div className="relative z-10 max-w-3xl mx-auto text-center">
+              {/* This gives a proper 16:9 aspect ratio container for the video */}
+              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-xl">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage:
+                      'url("https://img.youtube.com/vi/u7P72Lu4iW0/maxresdefault.jpg")',
+                  }}
+                ></div>
+                {/* Play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                    <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-t-transparent border-b-transparent border-l-red-600 ml-1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -331,7 +362,7 @@ const Home = () => {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen="true"
                 loading="lazy"
                 className="rounded-lg"
                 title="IISc Location"
@@ -339,7 +370,7 @@ const Home = () => {
             </div>
 
             {/* Location Details */}
-            <div id="location">
+            <div id="map">
               <div className="space-y-4 text-white">
                 {[
                   {

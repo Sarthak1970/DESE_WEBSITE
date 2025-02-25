@@ -54,7 +54,7 @@ const eventsData = [
   },
   {
     id: 2,
-    title: "Drone Flying",
+    title: "Drone Odyssey",
     date: "01-Mar-2025",
     time: "10:00 AM - 4:00 PM",
     location: "DESE Front Lawn",
