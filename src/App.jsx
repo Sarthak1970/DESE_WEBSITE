@@ -7,10 +7,13 @@ import FloatingShape from './components/FloatingShape'
 import Footer from './components/Footer'
 import GoldenJubilee from './pages/GoldenJubilee'
 import ScrollToTop from './components/ScrollToTop'
+import SplashCursor from './blocks/Animations/SplashCursor/SplashCursor'
+
 
 const App = () => {
   return (
     <Router>
+      <SplashCursor />
       <ScrollToTop />
       <div>
         <Navbar />
