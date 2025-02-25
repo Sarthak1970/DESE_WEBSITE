@@ -43,6 +43,32 @@ const Home = () => {
     };
   }, []);
 
+  const handleNavClick = (item) => {
+    if (item.isPage) {
+      navigate(item.href);
+      if (item.href === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } else {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          const section = document.getElementById(item.href.replace("#", ""));
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 300);
+      } else {
+        const section = document.getElementById(item.href.replace("#", ""));
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+    setActiveLink(item.name);
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <div className="relative z-0 min-h-screen bg-gradient-to-b from-[#030418] to-[#0a0b2e]">
@@ -196,7 +222,7 @@ const Home = () => {
             </p>
             <Button
               onClick={() => {
-                window.location.href = "/demo";
+                handleNavClick({ href: "/demo", isPage: true });
               }}
               variant="accent"
               className="py-1 px-2"
