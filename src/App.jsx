@@ -17,7 +17,7 @@ const App = () => {
         <FloatingShape />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Demo" element={<Demo />} />
+          <Route path="/demo" element={<Demo />} />
           <Route path="/GoldenJubilee" element={<GoldenJubilee />} />
         </Routes>
         <Footer />
