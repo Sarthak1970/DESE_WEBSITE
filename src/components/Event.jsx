@@ -125,7 +125,7 @@ const Event = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mb-12 md:mb-20"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12 md:mb-20"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ececed] via-[#d4b6ff] to-[#b584fd] animate-text-shimmer">
               Event Highlights

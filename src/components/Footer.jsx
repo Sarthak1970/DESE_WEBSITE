@@ -1,12 +1,14 @@
-import DeseLogo from "../assets/DeseLogo.svg"
-``
+import DeseLogo from "../assets/DeseLogo.svg";
+``;
 const Footer = () => {
   return (
     <footer className="bg-[#030418] border-t border-white/10 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {/* Quick Links */}
         <div className="bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
-          <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">Quick Links</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">
+            Quick Links
+          </h3>
           <ul className="space-y-2 text-center sm:text-left">
             {/* <li>
               <a
@@ -16,6 +18,7 @@ const Footer = () => {
                 Research
               </a>
             </li> */}
+
             <li>
               <a
                 href="#event-highlights"
@@ -34,10 +37,16 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/GoldenJubilee"
                 className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base"
               >
-                Admissions
+                Golden Jubilee
+              </a>
+            </li>
+            <li>
+              <a href="https://dese.iisc.ac.in/" className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base">
+              
+                DESE Website
               </a>
             </li>
           </ul>
@@ -45,14 +54,17 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
-          <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">Contact Us</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">
+            Contact Us
+          </h3>
           <div className="mt-4">
-            <img 
-              src={DeseLogo} 
-              alt="Logo" 
+            <img
+              src={DeseLogo}
+              alt="Logo"
               className="mx-auto h-12 sm:h-16 transition-all duration-300 hover:scale-110 hover:brightness-125 "
               style={{
-                filter:"invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
+                filter:
+                  "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
               }}
             />
           </div>
@@ -81,7 +93,9 @@ const Footer = () => {
 
         {/* Social Media */}
         <div className="bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
-          <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">Follow Us</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400 mb-3 sm:mb-4 text-center sm:text-left">
+            Follow Us
+          </h3>
           <div className="flex justify-center sm:justify-start gap-6">
             <a
               href="https://www.facebook.com/share/14oVQcUGjD/"
@@ -108,7 +122,8 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-white/10 py-4 sm:py-6 bg-[#0a0b2e]/50">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-300 text-xs sm:text-sm">
-          © {new Date().getFullYear()} Department of Electronic Systems Engineering. All Rights Reserved
+          © {new Date().getFullYear()} Department of Electronic Systems
+          Engineering. All Rights Reserved
         </div>
       </div>
     </footer>

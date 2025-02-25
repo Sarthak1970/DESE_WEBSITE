@@ -14,7 +14,7 @@ const teamMembers = [
       "https://res.cloudinary.com/dosnuagvu/image/upload/v1740401583/BASATI_SIVAKRISHNA_2_-min_anzkci.jpg",
   },
   {
-    name: "Bharat S",
+    name: "Bharath S",
     role: "M.Tech",
     image:
       "https://res.cloudinary.com/dosnuagvu/image/upload/v1740401584/Bharath_S_1_-min_dn7bph.jpg",
@@ -98,7 +98,7 @@ const teamMembers = [
       "https://res.cloudinary.com/dosnuagvu/image/upload/v1740401576/Toms_Jiji_Varghese_1_-min_qgbgww.jpg",
   },
   {
-    name: "Ujjawal Chaudhary",
+    name: "Ujjwal Chaudhary",
     role: "M.Tech",
     image:
       "https://res.cloudinary.com/dosnuagvu/image/upload/v1740401578/Ujjwal_Chaudhary_1_-min_oxublb.jpg",
