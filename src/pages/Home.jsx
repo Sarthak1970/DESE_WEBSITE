@@ -128,11 +128,11 @@ const Home = () => {
                 <img
                   src={OpenDaySvg}
                   alt="Open Day Logo"
-                  className="h-[150px] sm:h-[200px] md:h-[250px] mb-8 transform transition-all duration-300 hover:scale-110 hover:brightness-125"
+                  className="h-[180px] sm:h-[200px] md:h-[250px] mb-8 transform transition-all duration-300 hover:scale-110 hover:brightness-125"
                 />
               </div>
             </div>
-            <div
+            {/* <div
               className="absolute bottom-8 animate-bounce animate-infinite animate-duration-2000 animate-ease-in-out cursor-pointer group"
               onClick={() => {
                 const nextSection = document.getElementById("demos");
@@ -142,12 +142,13 @@ const Home = () => {
                   console.error("Demos section not found");
                 }
               }}
-            >
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4 text-center bg-clip-text bg-gradient-to-r from-white to-blue-400 text-transparent">
+            > */}
+            <div className="bottom-5 mb-8 absolute">
+              <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-center bg-clip-text bg-gradient-to-r from-white to-blue-400 text-transparent">
                 1st MARCH, 2025 | 9AM-5PM
               </h2>
 
-              <svg
+              {/* <svg
                 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mx-auto text-white group-hover:text-blue-400 transition-colors duration-300"
                 fill="none"
                 stroke="currentColor"
@@ -159,7 +160,7 @@ const Home = () => {
                   strokeWidth="2"
                   d="M19 14l-7 7m0 0l-7-7m7 7V3"
                 ></path>
-              </svg>
+              </svg> */}
             </div>
           </div>
         </div>
@@ -311,7 +312,7 @@ const Home = () => {
           <Team />
         </div>
         <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
+          <h2 className="text-5xl sm:text-5xl md:text-6xl font-bold text-center mb-8 md:mb-16 text-transparent bg-clip-text bg-gradient-to-r from-[#ececed] to-[#b584fd] animate-text-glow">
             Locate Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-sm">

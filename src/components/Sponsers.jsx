@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import TexasInstrument from "../assets/TexasInstruments-Logo.svg";
+// import TexasInstrument from "../assets/TexasInstruments-Logo.svg";
 
 const Sponsors = () => {
   const marqueeRef = useRef(null);
@@ -19,7 +19,7 @@ const Sponsors = () => {
   }, []);
 
   const logos = [
-    TexasInstrument,
+    // TexasInstrument,
     "https://res.cloudinary.com/dosnuagvu/image/upload/v1740236743/TalentSprint_Logo_PNG_hlesog.png",
     "https://res.cloudinary.com/dosnuagvu/image/upload/v1740236742/Lab2Market_Logo_vztnd7.png",
     "https://res.cloudinary.com/dosnuagvu/image/upload/v1740236744/Sasken_wntnem.jpg",
