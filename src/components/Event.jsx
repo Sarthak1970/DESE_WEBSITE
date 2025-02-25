@@ -1,16 +1,31 @@
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { RiCalendarEventLine, RiMapPinLine, RiTimeLine } from "@remixicon/react";
-import Event1 from "../assets/Event/1.png"
-import Event2 from "../assets/Event/2.png"
-import Event3 from "../assets/Event/3.png"
-import Event4 from "../assets/Event/4.png"
-import Event5 from "../assets/Event/5.png"
-import Event6 from "../assets/Event/6.png"
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import {
+  RiCalendarEventLine,
+  RiMapPinLine,
+  RiTimeLine,
+} from "@remixicon/react";
+import Event1 from "../assets/Event/1.png";
+import Event2 from "../assets/Event/2.png";
+import Event3 from "../assets/Event/3.png";
+import Event4 from "../assets/Event/4.png";
+import Event5 from "../assets/Event/5.png";
+import Event6 from "../assets/Event/6.png";
 
 const eventsData = [
   {
     id: 1,
+    title: "Line Follower Context",
+    date: "01-Mar-2025",
+    // time: "2:30 PM - 4:00 PM",
+    location: "Room 134, DESE",
+    // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
+    image:
+      "https://res.cloudinary.com/dosnuagvu/image/upload/v1740487502/WhatsApp_Image_2025-02-25_at_17.34.33_b86e7661_rvu0pk.jpg",
+    type: "seminar",
+  },
+  {
+    id: 7,
     title: "Laser Labyrinth",
     date: "01-Mar-2025",
     location: "Room 129, DESE",
@@ -27,7 +42,7 @@ const eventsData = [
     location: "DESE Front Lawn",
     // description: "Live demonstrations of cutting-edge embedded systems and IoT applications developed by our students.",
     image: Event2,
-    type: "exhibition"
+    type: "exhibition",
   },
   {
     id: 3,
@@ -44,11 +59,11 @@ const eventsData = [
     id: 4,
     title: "Kid Zone ",
     date: "01-Mar-2025",
-    time: "9:30 AM - 5:00 PM", 
+    time: "9:30 AM - 5:00 PM",
     location: "NPTEL Office",
     // description: "Experience our autonomous robots and robotic arm demonstrations for industrial automation applications.",
     image: Event4,
-    type: "exhibition"
+    type: "exhibition",
   },
   {
     id: 5,
@@ -63,23 +78,13 @@ const eventsData = [
   {
     id: 6,
     title: "Maze Runner",
-    date: "01-Mar-2025", 
+    date: "01-Mar-2025",
     time: "2:30 PM - 4:00 PM",
     location: "Room 134, DESE",
     // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
     image: Event6,
-    type: "seminar"
+    type: "seminar",
   },
-  {
-    id: 7,
-    title: "Line Follower Context",
-    date: "01-Mar-2025", 
-    // time: "2:30 PM - 4:00 PM",
-    location: "Room 134, DESE",
-    // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
-    image: "https://res.cloudinary.com/dosnuagvu/image/upload/v1740487502/WhatsApp_Image_2025-02-25_at_17.34.33_b86e7661_rvu0pk.jpg",
-    type: "seminar"
-  }
 ];
 
 const Event = () => {
@@ -88,9 +93,9 @@ const Event = () => {
 
   useEffect(() => {
     if (selectedEvent) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   }, [selectedEvent]);
 
@@ -114,13 +119,13 @@ const Event = () => {
               key={event.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.03,
-                boxShadow: "0 0 25px 8px rgba(155,93,229,0.35)"
+                boxShadow: "0 0 25px 8px rgba(155,93,229,0.35)",
               }}
-              transition={{ 
+              transition={{
                 duration: 0.4,
-                ease: "easeOut"
+                ease: "easeOut",
               }}
               viewport={{ once: true, margin: "-50px" }}
               onClick={() => {
@@ -147,17 +152,23 @@ const Event = () => {
                 <div className="space-y-3 text-base text-gray-300">
                   <div className="flex items-center gap-3 group/item">
                     <RiCalendarEventLine className="w-5 h-5 text-[#b584fd]" />
-                    <span className="group-hover/item:text-[#b584fd] transition-colors duration-300">{event.date}</span>
+                    <span className="group-hover/item:text-[#b584fd] transition-colors duration-300">
+                      {event.date}
+                    </span>
                   </div>
                   {event.time && (
                     <div className="flex items-center gap-3 group/item">
                       <RiTimeLine className="w-5 h-5 text-[#b584fd]" />
-                      <span className="group-hover/item:text-[#b584fd] transition-colors duration-300">{event.time}</span>
+                      <span className="group-hover/item:text-[#b584fd] transition-colors duration-300">
+                        {event.time}
+                      </span>
                     </div>
                   )}
                   <div className="flex items-center gap-3 group/item">
                     <RiMapPinLine className="w-5 h-5 text-[#b584fd]" />
-                    <span className="group-hover/item:text-[#b584fd] transition-colors duration-300">{event.location}</span>
+                    <span className="group-hover/item:text-[#b584fd] transition-colors duration-300">
+                      {event.location}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -168,42 +179,54 @@ const Event = () => {
         {/* Popup Modal */}
         {selectedEvent && (
           <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               className="bg-[#0a0f2d] rounded-2xl p-6 md:p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto relative border border-[#b584fd]/30"
             >
-              <button 
+              <button
                 onClick={() => setSelectedEvent(null)}
                 className="absolute top-4 right-4 text-[#b584fd] hover:text-white transition-colors"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
 
-              <img 
-                src={selectedEvent.image} 
+              <img
+                src={selectedEvent.image}
                 alt={selectedEvent.title}
                 className="w-full h-64 object-contain rounded-xl mb-6"
               />
 
-              <h3 className="text-3xl font-bold text-white mb-4">{selectedEvent.title}</h3>
-              
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {selectedEvent.title}
+              </h3>
+
               <div className="space-y-2 text-gray-300">
                 <div className="flex items-center gap-3">
                   <RiCalendarEventLine className="w-5 h-5 text-[#b584fd]" />
                   <span>{selectedEvent.date}</span>
                 </div>
-                
+
                 {selectedEvent.time && (
                   <div className="flex items-center gap-3">
                     <RiTimeLine className="w-5 h-5 text-[#b584fd]" />
                     <span>{selectedEvent.time}</span>
                   </div>
                 )}
-                
+
                 <div className="flex items-center gap-3">
                   <RiMapPinLine className="w-5 h-5 text-[#b584fd]" />
                   <span>{selectedEvent.location}</span>
@@ -216,7 +239,9 @@ const Event = () => {
 
                 {selectedEvent.Contact && (
                   <div className="pt-2">
-                    <h4 className="text-xl font-semibold text-white mb-2">Contact</h4>
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      Contact
+                    </h4>
                     <p className="text-gray-300">{selectedEvent.Contact}</p>
                   </div>
                 )}
