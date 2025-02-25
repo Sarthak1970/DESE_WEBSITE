@@ -55,7 +55,7 @@ const Sponsors = () => {
                 <img
                   src={logo}
                   alt="Sponsor Logo"
-                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-100 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             ))}

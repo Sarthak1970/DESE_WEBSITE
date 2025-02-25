@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { title } from 'framer-motion/client';
 import { useState } from "react";
 
 const EventTimeline = () => {
@@ -17,6 +18,10 @@ const EventTimeline = () => {
       title: "Project Demos", 
       location: "Conference Room (124), Communication Lab (219), Power Electronics Lab (231), Classrooms 134 & 137"
     },
+    {time:"10:00 AM" , title:"Tesla Coil Showcase" , location:"Power Lab :209"},{
+      time:"10:00 AM" , title:"Buzz Wire Game" , location:" Near CSRL lab"
+
+    }
   ];
 
   return (

@@ -11,19 +11,37 @@ import Event3 from "../assets/Event/3.png";
 import Event4 from "../assets/Event/4.png";
 import Event5 from "../assets/Event/5.png";
 import Event6 from "../assets/Event/6.png";
+import { title } from "framer-motion/client";
 
 const eventsData = [
+  // {
+  //   id: 1,
+  //   title: "Line Follower Context",
+  //   date: "01-Mar-2025",
+  //   // time: "2:30 PM - 4:00 PM",
+  //   location: "Room 134, DESE",
+  //   // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
+  //   image:
+  //     "https://res.cloudinary.com/dosnuagvu/image/upload/v1740487502/WhatsApp_Image_2025-02-25_at_17.34.33_b86e7661_rvu0pk.jpg",
+  //   type: "seminar",
+  // },
   {
     id: 1,
-    title: "Line Follower Context",
+    title: "Tesla Coil Showcase",
     date: "01-Mar-2025",
-    // time: "2:30 PM - 4:00 PM",
-    location: "Room 134, DESE",
-    // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
-    image:
-      "https://res.cloudinary.com/dosnuagvu/image/upload/v1740487502/WhatsApp_Image_2025-02-25_at_17.34.33_b86e7661_rvu0pk.jpg",
-    type: "seminar",
+    location:"Power Lab :209",
+    time: "10:00 AM",
+    image:"https://res.cloudinary.com/dosnuagvu/image/upload/v1740508454/WhatsApp_Image_2025-02-25_at_23.49.47_977b7b84_n1xk21.jpg"
   },
+  {
+    id:8,
+    title:"Buzz Wire Game",
+    date:"01-Mar-2025",
+    time:"10:00 AM",
+    location:" Near CSRL Lab, DESE",
+    image:"https://res.cloudinary.com/dosnuagvu/image/upload/v1740508453/WhatsApp_Image_2025-02-25_at_23.54.39_2e15d88a_o8snpe.jpg"
+  },
+
   {
     id: 7,
     title: "Laser Labyrinth",
@@ -31,7 +49,7 @@ const eventsData = [
     location: "Room 129, DESE",
     // description: "Explore our state-of-the-art Smart Grid laboratory featuring renewable energy integration and power system demonstrations.",
     image: Event1,
-    type: "tour",
+    // type: "tour",
     // Contact: "Dr. Ramesh Kumar - 98765 43210"
   },
   {
@@ -42,7 +60,7 @@ const eventsData = [
     location: "DESE Front Lawn",
     // description: "Live demonstrations of cutting-edge embedded systems and IoT applications developed by our students.",
     image: Event2,
-    type: "exhibition",
+    // type: "exhibition",
   },
   {
     id: 3,
@@ -52,27 +70,27 @@ const eventsData = [
     location: "2nd Floor Staircase",
     // description: "Interactive session on machine learning applications in medical diagnostics and healthcare systems.",
     image: Event3,
-    type: "workshop",
+    // type: "workshop",
     // Contact: "Prof. Ananya Sharma - 99876 54321"
   },
   {
     id: 4,
-    title: "Kid Zone ",
+    title: "Kids Zone ",
     date: "01-Mar-2025",
     time: "9:30 AM - 5:00 PM",
     location: "NPTEL Office",
     // description: "Experience our autonomous robots and robotic arm demonstrations for industrial automation applications.",
     image: Event4,
-    type: "exhibition",
+    // type: "exhibition",
   },
   {
     id: 5,
-    title: "virtual Shooting",
+    title: "Virtual Shooting",
     date: "01-Mar-2025",
     location: "Room 137, DESE",
     // description: "Display of advanced VLSI chip designs and fabrication techniques developed through student projects.",
     image: Event5,
-    type: "exhibition",
+    // type: "exhibition",
     // Contact: "Dr. Sanjay Patel - 97788 66554"
   },
   {
@@ -83,7 +101,7 @@ const eventsData = [
     location: "Room 134, DESE",
     // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
     image: Event6,
-    type: "seminar",
+    // type: "seminar",
   },
 ];
 
@@ -113,8 +131,8 @@ const Event = () => {
               Event Highlights
             </span>
           </motion.h2>
-          <div className="text-3xl sm:text-4xl relative z-100 font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-pink-400 animate-text-shimmer">
-            <div className="mt-12 mb-20 z-10 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <div className="text-3xl sm:text-4xl  z-(-100) font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-pink-400 animate-text-shimmer">
+            <div className="mt-12 mb-20 z-(-10000000) sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <img
                 src="https://res.cloudinary.com/dosnuagvu/image/upload/v1740487502/WhatsApp_Image_2025-02-25_at_17.34.33_b86e7661_rvu0pk.jpg"
                 alt="Failed to"
@@ -152,9 +170,11 @@ const Event = () => {
                   />
                 </div>
                 <div className="relative z-20 p-6 -mt-10">
-                  <span className="px-4 py-1 text-sm rounded-full bg-[#b584fd]/20 text-[#b584fd] border border-[#b584fd]/30 inline-block mb-4">
+                  {/* <span className="px-4 py-1 text-sm rounded-full bg-[#b584fd]/20 text-[#b584fd] border border-[#b584fd]/30 inline-block mb-4">
                     {event.type}
-                  </span>
+                  </span> */}
+                  <span className="px-4 py-1 text-sm rounded-full"></span>
+                  <span></span>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-[#b584fd] transition-colors duration-300">
                     {event.title}
                   </h3>
