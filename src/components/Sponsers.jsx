@@ -27,19 +27,19 @@ const Sponsors = () => {
 
   return (
     <div className="relative py-12 sm:py-16 md:py-24 overflow-hidden backdrop-blur-sm">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0b2e] to-[#1a1b4e] opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0b2e] to-[#1a1b4e] opacity-95"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text  bg-gradient-to-r  from-white to-[#FFA500] z-10000">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-yellow-300 to-[#FFA500] z-10000">
             Our Sponsors
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-4 font-medium">
             Proud to be supported by industry leaders who share our vision for innovation
           </p>
         </div>
 
-        <div className="relative mx-auto w-full overflow-hidden py-6 sm:py-8 md:py-12 bg-gray-900/50
+        <div className="relative mx-auto w-full overflow-hidden py-6 sm:py-8 md:py-12 bg-gray-900/70
           before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[50px] sm:before:w-[75px] md:before:w-[100px] before:bg-gradient-to-r before:from-gray-900 before:to-transparent 
           after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[50px] sm:after:w-[75px] md:after:w-[100px] after:bg-gradient-to-l after:from-gray-900 after:to-transparent">
           <div
@@ -50,12 +50,12 @@ const Sponsors = () => {
             {[...logos, ...logos].map((logo, i) => (
               <div
                 key={i}
-                className="group relative flex items-center justify-center h-16 w-32 sm:h-20 sm:w-40 md:h-24 md:w-48 rounded-xl bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20"
+                className="group relative flex items-center justify-center h-16 w-32 sm:h-20 sm:w-40 md:h-24 md:w-48 rounded-xl bg-white/30 backdrop-blur-sm border border-white/30 hover:border-white/60 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30"
               >
                 <img
                   src={logo}
                   alt="Sponsor Logo"
-                  className="h-8 sm:h-10 md:h-12 w-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             ))}

@@ -111,7 +111,7 @@ const GoldenJubilee = () => {
       />
 
       {/* Content Section */}
-      <div className="space-y-10 w-full max-w-5xl mt-8">
+      <div className="space-y-10 w-full max-w-5xl mt-8" >
         {goldenJubileeData.map((item, index) => (
           <div
             key={index}

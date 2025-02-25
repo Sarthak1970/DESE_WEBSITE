@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   RiCalendarEventLine,
   RiMapPinLine,
@@ -25,7 +25,7 @@ import MainGallary from "../components/MainGallary.jsx";
 import chair from "../assets/ChairMan.jpg";
 
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 const Home = () => {
@@ -37,9 +37,9 @@ const Home = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -63,7 +63,7 @@ const Home = () => {
 
           {/* Back to Top Button */}
           {isVisible && (
-            <button 
+            <button
               onClick={scrollToTop}
               className="fixed bottom-10 text-2xl right-10 z-50 bg-[#2E2388] text-white p-5 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
               aria-label="Back to top"
@@ -89,7 +89,8 @@ const Home = () => {
               alt="DESE Logo"
               className="h-[50px] sm:h-[70px] md:h-[120px] transition-all duration-300 hover:scale-110 hover:brightness-125"
               style={{
-                filter:               "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
+                filter:
+                  "invert(42%) sepia(75%) saturate(600%) hue-rotate(350deg) brightness(95%) contrast(105%)",
               }}
             />
           </div>
@@ -133,7 +134,10 @@ const Home = () => {
         </div>
 
         {/* About DESE Section */}
-        <div id="about-dese" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden">
+        <div
+          id="about-dese"
+          className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden"
+        >
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-5"></div>
           </div>
@@ -146,13 +150,18 @@ const Home = () => {
             <div className="flex flex-col md:flex-row items-center md:space-x-6 space-y-8 md:space-y-0">
               {/* Text Section - 40% */}
               <div className="w-full md:w-2/5 text-center md:text-left">
-                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold">
-                  DESE (formerly known as CEDT) invites students.
+                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold ">
+                  {/* DESE (formerly known as CEDT) invites students. */}
                 </p>
-                <p className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold">
-                  IISc's Open Day is an annual event when the Institute opens its doors for the public to visit, learn, 
-                  and understand various technological projects and research. DESE (formerly known as CEDT) invites 
-                  students, professors, and professionals from the industry. We look forward to seeing you!
+                <p
+                  className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold Amasis MT Pro "
+                  style={{ fontFamily: "Amasis MT Pro, sans-serif" }}
+                >
+                  IISc's Open Day is an annual event when the Institute opens
+                  its doors for the public to visit, learn, and understand
+                  various technological projects and research. DESE (formerly
+                  known as CEDT) invites students, professors, and professionals
+                  from the industry. We look forward to seeing you!
                 </p>
               </div>
 
@@ -168,16 +177,24 @@ const Home = () => {
         </div>
 
         {/* Demos Section */}
-        <div id="demos" className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden bg-[#0a0b2e]/50 backdrop-blur-sm rounded-lg shadow-lg">
+        <div
+          id="demos"
+          className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 overflow-hidden bg-[#0a0b2e]/50 backdrop-blur-sm rounded-lg shadow-lg"
+        >
           <div className="relative z-10 max-w-7xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
               Experience Innovation Up Close!
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-10 px-4 sm:px-0">
-              Dive into a showcase of exciting projects and live demonstrations that highlight creativity, technology, and problem-solving in action. Witness how ideas come to life and inspire the future!
+              Dive into a showcase of exciting projects and live demonstrations
+              that highlight creativity, technology, and problem-solving in
+              action. Witness how ideas come to life and inspire the future!
             </p>
-            <Button onClick={() => window.location.href = '/demo'} variant="accent"
-              className='py-1 px-2'>
+            <Button
+              onClick={() => (window.location.href = "/demo")}
+              variant="accent"
+              className="py-1 px-2"
+            >
               Go to Demos page
             </Button>
           </div>
@@ -209,7 +226,7 @@ const Home = () => {
         <div className="mt-12 mb-20 z-10 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="relative  p-8 sm:p-12 rounded-3xl shadow-2xl hover:shadow-[0_8px_30px_rgba(125,67,255,0.3)] transition-all duration-500">
             <div className="absolute inset-0 border border-white/10 rounded-3xl backdrop-blur-lg"></div>
-            
+
             <h2 className="text-3xl sm:text-4xl relative z-100 font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-pink-400 animate-text-shimmer">
               Message from the Chair
             </h2>
@@ -217,31 +234,38 @@ const Home = () => {
             <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 relative">
               <div className="group relative w-full lg:w-2/5">
                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                <img 
-                  src={chair} 
-                  alt="Chairperson" 
+                <img
+                  src={chair}
+                  alt="Chairperson"
                   className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-2xl ring-4 ring-white/10 transform transition-all duration-500 group-hover:scale-102 group-hover:ring-purple-300/30"
                 />
               </div>
 
               <div className="flex-1 space-y-6 text-white relative">
-                <svg 
-                  className="absolute -top-6 -left-6 w-16 h-16 text-purple-300/20" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  className="absolute -top-6 -left-6 w-16 h-16 text-purple-300/20"
+                  viewBox="0 0 24 24"
                   fill="currentColor"
                 >
                   <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.921c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.921c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
                 </svg>
-                
-                <p className="text-lg sm:text-xl leading-relaxed font-medium text-gray-200 text-center lg:text-left italic">
-                  "A warm welcome to the OPEN DAY event. The department is 51 years old. For over half a century, we have been a beacon in electronic systems. This open day, we open our doors to share with you the exciting work we are doing and the bright future that we are building. 
 
-We showcase our students' talents, faculty's expertise, and cutting-edge research happening in the department. It is a testament to the dedication of generations of faculty, the brilliance of our students, and the unwavering support of our alumni. You may find a few pleasant surprises this time. Visit us and get inspired."
+                <p className="text-lg sm:text-xl leading-relaxed font-medium text-gray-200 text-center lg:text-left italic">
+                  "A warm welcome to the OPEN DAY event. The department is 51
+                  years old. For over half a century, we have been a beacon in
+                  electronic systems. This open day, we open our doors to share
+                  with you the exciting work we are doing and the bright future
+                  that we are building. We showcase our students' talents,
+                  faculty's expertise, and cutting-edge research happening in
+                  the department. It is a testament to the dedication of
+                  generations of faculty, the brilliance of our students, and
+                  the unwavering support of our alumni. You may find a few
+                  pleasant surprises this time. Visit us and get inspired."
                 </p>
 
                 <div className="text-right mt-8">
                   <h3 className="text-xl font-bold bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent">
-                  Prof.  L.Umanand
+                    Prof.  L.Umanand
                   </h3>
                   <p className="text-sm text-purple-200/80">Chair, DESE</p>
                 </div>
@@ -253,7 +277,7 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
         <div id="team">
           <Team />
         </div>
-        <div  className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="mt-12 sm:mt-16 md:mt-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-400">
             Locate Us
           </h2>
@@ -272,13 +296,13 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
             </div>
 
             {/* Location Details */}
-            <div id="location" >
+            <div id="location">
               <div className="space-y-4 text-white">
                 {[
                   {
                     title: "When",
                     icon: "ri-calendar-line",
-                    content: "1st March, 2025"
+                    content: "1st March, 2025",
                   },
                   {
                     title: "Where",
@@ -286,25 +310,26 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
                     content: `Department of Electronic Systems,
                     INDIAN INSTITUTE OF SCIENCE,
                     Mathikere, Bengaluru,
-                    Karnataka 560012`
+                    Karnataka 560012`,
                   },
                   {
                     title: "How to get there",
                     icon: "ri-directions-line",
-                    content: "IISc is often locally referred to as the Tata Institute. It is better to use the name Tata Institute with the taxi, auto-rickshaw drivers, and bus conductors. Inside the institute, we have enough banners for directions to reach our department DESE."
-                  }
+                    content:
+                      "IISc is often locally referred to as the Tata Institute. It is better to use the name Tata Institute with the taxi, auto-rickshaw drivers, and bus conductors. Inside the institute, we have enough banners for directions to reach our department DESE.",
+                  },
                 ].map((item, index) => (
                   <div key={index} className="mb-4">
                     <h3 className="text-lg sm:text-xl font-bold mb-2 text-center text-blue-300">
                       <i className={`${item.icon} text-blue-400`}></i>
                       {item.title}
                     </h3>
-                    <p  className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
+                    <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line text-center">
                       {item.content}
                     </p>
                   </div>
                 ))}
-              </div >
+              </div>
             </div>
           </div>
         </div>
@@ -313,9 +338,7 @@ We showcase our students' talents, faculty's expertise, and cutting-edge researc
         <div id="sponsors-section" className="mt-8 sm:mt-10 md:mt-12">
           <Sponsors />
         </div>
-
       </div>
-
     </>
   );
 };

@@ -11,47 +11,47 @@ const FloatingShape = () => {
       snowflake.style.width = snowflake.style.height = Math.random() * 4 + 2 + 'px';
       
       document.querySelector('.snowfall-container').appendChild(snowflake);
-
+      
       // Remove snowflake after animation
       setTimeout(() => {
         snowflake.remove();
       }, 5000);
     };
-
+    
     const snowfallInterval = setInterval(createSnowflake, 50);
-
+    
     return () => clearInterval(snowfallInterval);
   }, []);
-
+  
   return (
-    <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden">
-    //   {/* Snowfall container */}
-    {/* //   <div className="snowfall-container absolute inset-0 z-10">
-    //     <style>
-    //       {`
-    //         .snowflake {
-    //           position: absolute;
-    //           background: white;
-    //           border-radius: 50%;
-    //           pointer-events: none;
-    //           animation: snowfall linear forwards;
-    //         }
-
-    //         @keyframes snowfall {
-    //           0% {
-    //             transform: translateY(-10vh) rotate(0deg);
-    //           }
-    //           100% {
-    //             transform: translateY(100vh) rotate(360deg);
-    //           }
-    //         }
-    //       `}
-    //     </style>
-    //   </div> */}
-
+    <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+      {/* Snowfall container */}
+      {/* <div className="snowfall-container absolute inset-0 z-10">
+        <style>
+          {`
+            .snowflake {
+              position: absolute;
+              background: white;
+              border-radius: 50%;
+              pointer-events: none;
+              animation: snowfall linear forwards;
+            }
+            
+            @keyframes snowfall {
+              0% {
+                transform: translateY(-10vh) rotate(0deg);
+              }
+              100% {
+                transform: translateY(100vh) rotate(360deg);
+              }
+            }
+          `}
+        </style>
+      </div> */}
+      
       {/* Background shapes */}
       <div
-        className="absolute bottom-[-30vh] left-[-20vw] z-0 blur-[60px]"
+        className="absolute bottom-[-30vh] left-[-20vw] z-[-2] blur-[60px]"
         style={{
           width: "60vw",
           height: "60vh",
@@ -60,10 +60,9 @@ const FloatingShape = () => {
           transition: "background 10s ease-in-out",
         }}
       />
-
-
+      
       <div
-        className="absolute bottom-[-30vh] right-[-20vw] z-0 blur-[60px]"
+        className="absolute bottom-[-30vh] right-[-20vw] z-[-2] blur-[60px]"
         style={{
           width: "60vw",
           height: "60vh",

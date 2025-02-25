@@ -17,7 +17,7 @@ const eventsData = [
     // description: "Explore our state-of-the-art Smart Grid laboratory featuring renewable energy integration and power system demonstrations.",
     image: Event1,
     type: "tour",
-    Contact: "Dr. Ramesh Kumar - 98765 43210"
+    // Contact: "Dr. Ramesh Kumar - 98765 43210"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const eventsData = [
     // description: "Interactive session on machine learning applications in medical diagnostics and healthcare systems.",
     image: Event3,
     type: "workshop",
-    Contact: "Prof. Ananya Sharma - 99876 54321"
+    // Contact: "Prof. Ananya Sharma - 99876 54321"
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const eventsData = [
     // description: "Display of advanced VLSI chip designs and fabrication techniques developed through student projects.",
     image: Event5,
     type: "exhibition",
-    Contact: "Dr. Sanjay Patel - 97788 66554"
+    // Contact: "Dr. Sanjay Patel - 97788 66554"
   },
   {
     id: 6,
@@ -68,6 +68,16 @@ const eventsData = [
     location: "Room 134, DESE",
     // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
     image: Event6,
+    type: "seminar"
+  },
+  {
+    id: 7,
+    title: "Line Follower Context",
+    date: "01-Mar-2025", 
+    // time: "2:30 PM - 4:00 PM",
+    location: "Room 134, DESE",
+    // description: "Panel discussion with distinguished alumni sharing industry insights and career opportunities in ECE.",
+    image: "https://res.cloudinary.com/dosnuagvu/image/upload/v1740487502/WhatsApp_Image_2025-02-25_at_17.34.33_b86e7661_rvu0pk.jpg",
     type: "seminar"
   }
 ];
