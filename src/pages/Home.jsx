@@ -72,8 +72,6 @@ const Home = () => {
 
   return (
     <>
-      
-
       <div className="relative z-0 min-h-screen bg-gradient-to-b from-[#030418] to-[#0a0b2e]">
         <div className="fixed z-[-1] inset-0 bg-[#030418]/50">
           <img
@@ -258,28 +256,28 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="relative w-full bg-gray-900 text-white py-16 px-6">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 bg-[url('/src/assets/tech-pattern.svg')] opacity-5"></div>
-            </div>
+          <div className="mt-12 mb-20 z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="relative p-7 sm:p-12 rounded-3xl shadow-2xl hover:shadow-[0_8px_30px_rgba(125,67,255,0.3)] transition-all duration-500">
+              <div className="absolute inset-0 border border-white/10 rounded-3xl backdrop-blur-lg bg-[#0a0b2e]/80"></div>
 
-            {/* Video Container */}
-            <div className="relative z-10 max-w-3xl mx-auto text-center">
-              {/* This gives a proper 16:9 aspect ratio container for the video */}
-              <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-xl">
+              {/* Video Container - width reduced by 15% */}
+              <div className="relative z-10 w-[85%] mx-auto">
                 <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage:
-                      'url("https://img.youtube.com/vi/u7P72Lu4iW0/maxresdefault.jpg")',
+                  className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-lg hover:shadow-purple-500/30 transform hover:scale-[1.02] transition-all duration-300"
+                  onClick={() => {
+                    // This will be handled by the iframe's click event in actual implementation
                   }}
-                ></div>
-                {/* Play button overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-t-transparent border-b-transparent border-l-red-600 ml-1"></div>
-                  </div>
+                >
+                  {/* YouTube iframe for local playback */}
+                  <iframe
+                    className="absolute inset-0 w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/u7P72Lu4iW0?rel=0"
+                    title="YouTube video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+
+                  {/* No need for the play button overlay since the iframe provides its own */}
                 </div>
               </div>
             </div>
