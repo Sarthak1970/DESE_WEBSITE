@@ -187,13 +187,19 @@ const Home = () => {
                 </p>
                 <p
                   className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold Amasis MT Pro "
-                  style={{ fontFamily: "Amasis MT Pro, sans-serif" }}
+                  // style={{ fontFamily: "Amasis MT Pro, sans-serif" }}
                 >
                   IISc's Open Day is an annual event when the Institute opens
                   its doors for the public to visit, learn, and understand
-                  various technological projects and research. DESE (formerly
-                  known as CEDT) invites students, professors, and professionals
-                  from the industry. We look forward to seeing you!
+                  various technological projects and research.
+                </p>
+                <p
+                  className="text-base sm:text-lg text-gray-200 leading-relaxed p-3 sm:p-4 rounded-xl shadow-lg hover:border-white/30 transition-all duration-300 font-semibold Amasis MT Pro "
+                  // style={{ fontFamily: "Amasis MT Pro, sans-serif" }}>
+                >
+                  DESE (formerly known as CEDT) invites students, professors,
+                  and professionals from the industry. We look forward to seeing
+                  you!
                 </p>
               </div>
 
@@ -318,18 +324,17 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-sm">
             {/* Map Section */}
             <div className="h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1Hl9k9RLdt2HId0_c2at1qykVd-WWKrE&ehbc=2E312F" 
-            width="100%" 
-            height="100%"
-            style={{border:0}}
-            allowFullScreen=""
-            loading="lazy"
-            className='rounded-lg'
-            title='IISc Location'
-            >
-            </iframe>
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1Hl9k9RLdt2HId0_c2at1qykVd-WWKrE&ehbc=2E312F"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                className="rounded-lg"
+                title="IISc Location"
+              ></iframe>
             </div>
-
 
             {/* Location Details */}
             <div id="location">
