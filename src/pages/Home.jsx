@@ -284,16 +284,18 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 bg-[#0a0b2e]/80 p-4 sm:p-6 rounded-xl border border-white/10 backdrop-blur-sm">
             {/* Map Section */}
             <div className="h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.225201201201!2d77.565123315304!3d13.0212019908201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d9b4f1f7d5%3A0x1b8e8b0b0b0b0b0b!2sDepartment%20of%20Electronic%20Systems%20Engineering%2C%20Indian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1629999999999!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                className="rounded-lg"
-              ></iframe>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Hl9k9RLdt2HId0_c2at1qykVd-WWKrE&ehbc=2E312F" 
+            width="100%" 
+            height="100%"
+            style={{border:0}}
+            allowFullScreen=""
+            loading="lazy"
+            className='rounded-lg'
+            title='IISc Location'
+            >
+            </iframe>
             </div>
+
 
             {/* Location Details */}
             <div id="location">

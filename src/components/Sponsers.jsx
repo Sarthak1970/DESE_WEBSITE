@@ -27,13 +27,13 @@ const Sponsors = () => {
 
   return (
     <div className="relative py-12 sm:py-16 md:py-24 overflow-hidden backdrop-blur-sm">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0b2e] to-[#1a1b4e] opacity-95"></div>
+      <div className="absolute inset-0 bg-gradient-to- opacity-95"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-yellow-300 to-[#FFA500] z-10000">
-            Our Sponsors
-          </h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent">
+          Our Sponsors
+        </h2>
           <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-4 font-medium">
             Proud to be supported by industry leaders who share our vision for innovation
           </p>
